@@ -1,6 +1,7 @@
 .container {
   min-height: 100vh;
   display: flex;
+  align-items: center;
   .leftContainer {
     height: 100%;
     width: 50%;
@@ -28,12 +29,17 @@
     h1 {
       font-size: 60px;
       margin-bottom: 15px;
+      border-bottom: 2px solid var(--secondary-color);
+      padding-bottom: 5px;
     }
     p:nth-child(3) {
       line-height: 26px;
       color: var(--primary-color);
       width: 70%;
       margin-bottom: 25px;
+      .icon {
+        width: 20px;
+      }
     }
     .btnContainer {
       button {
