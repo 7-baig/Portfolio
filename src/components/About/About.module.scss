@@ -31,6 +31,7 @@
       margin-bottom: 15px;
       border-bottom: 2px solid var(--secondary-color);
       padding-bottom: 5px;
+      color: var(--primary-color);
     }
     p:nth-child(3) {
       line-height: 26px;
@@ -38,7 +39,8 @@
       width: 70%;
       margin-bottom: 25px;
       .icon {
-        width: 20px;
+        width: 30px;
+        margin-bottom: -8px;
       }
     }
     .btnContainer {
