@@ -1,5 +1,5 @@
 .container {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   .leftContainer {
     height: 100%;
@@ -72,15 +72,17 @@
   .container {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 50px);
+    justify-content: center;
+    min-height: calc(100vh - 50px);
     .leftContainer {
-      width: 100%;
-      justify-content: center;
-      align-items: flex-end;
-      height: 40%;
-      padding: 0px 0px 20px 0px;
+        width: 100%;
+        justify-content: center;
+        align-items: flex-end;
+        height: 40%;
+        padding: 0px 0px 20px 0px;
       img {
         width: 80%;
+        max-width: 350px;
       }
     }
     .rightContainer {
@@ -101,6 +103,7 @@
         line-height: 26px;
         color: var(--primary-color);
         width: 70%;
+        max-width: 320px;
         margin-bottom: 20px;
         text-align: center;
       }
