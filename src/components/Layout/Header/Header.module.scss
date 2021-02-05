@@ -1,43 +1,79 @@
 .container {
-    border: 1px solid black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 25px;
-    .leftContainer {
-        .nameContainer {
-            display: flex;
-            align-items: center;
-            .circle {
-                background-color: var(--secondary-color);
-                border-radius: 50px;
-                width: 30px;
-                height: 30px;
-                padding: 5px;
-                color: #ffffff;
-                font-size: 30px;
-                font-weight: bolder;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            p {
-                margin-left: 8px;
-                font-size: 22px;
-                span {
-                    font-weight: bold;
-                }
-            }
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  .leftContainer {
+    .nameContainer {
+      display: flex;
+      align-items: center;
+      .circle {
+        background-color: var(--secondary-color);
+        border-radius: 50px;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        color: #ffffff;
+        font-size: 30px;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      p {
+        margin-left: 8px;
+        font-size: 22px;
+        span {
+          font-weight: bold;
         }
+      }
+    }
+  }
+  .rightContainer {
+    display: flex;
+    align-items: center;
+    ul {
+      display: flex;
+      align-items: center;
+      li {
+        list-style-type: none;
+        margin-left: 45px;
+      }
+    }
+    i {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 10px 10px;
+    .leftContainer {
+      .nameContainer {
+        .circle {
+          width: 25px;
+          height: 25px;
+          padding: 3px;
+          font-size: 22px;
+        }
+        p {
+          margin-left: 6px;
+          font-size: 18px;
+          span {
+            font-weight: bold;
+          }
+        }
+      }
     }
     .rightContainer {
-        ul {
-            display: flex;
-            align-items: center;
-            li {
-                list-style-type: none;
-                margin-left: 35px;
-            }
-        }
+      ul {
+        display: none;
+      }
+      i {
+        display: block;
+      }
     }
+  }
 }

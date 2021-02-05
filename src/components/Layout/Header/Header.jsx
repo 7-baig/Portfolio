@@ -20,6 +20,7 @@ const Header = () => {
           <li>Blog</li>
           <li>Contact Me</li>
         </ul>
+        <i class="fas fa-bars"></i>
       </div>
     </div>
   )
