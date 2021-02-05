@@ -1,36 +1,41 @@
+@media screen and (min-width: 768px) {
+  .container {
+    display: none;
+  }
+}
 .container {
-    position: fixed;
-    width: 300px;
-    bottom: 0px;
-    height: 100vh;
-    top: 52px;
-    z-index: 2;
-    background: #ffffff;
-    transition: right 700ms ease-in-out;
-    box-shadow: 0 0 70px 0 rgb(0 0 0 / 8%);
+  position: fixed;
+  width: 300px;
+  bottom: 0px;
+  height: 100vh;
+  top: 52px;
+  z-index: 2;
+  background: #ffffff;
+  transition: right 700ms ease-in-out;
+  box-shadow: 0 0 70px 0 rgb(0 0 0 / 8%);
 }
 .container hr {
-    border: 1px solid #ffffff2a;
+  border: 1px solid #ffffff2a;
 }
 .rowWrapper {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--primary-color);
-    margin: 35px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--primary-color);
+  margin: 35px 20px;
 }
 .left {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .left i {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 .left p {
-    margin-left: 10px;
-    text-transform: capitalize;
+  margin-left: 10px;
+  text-transform: capitalize;
 }
