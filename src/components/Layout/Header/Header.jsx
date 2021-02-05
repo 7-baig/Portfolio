@@ -1,9 +1,12 @@
-import React from "react"
+import React, { useState } from "react"
+import SideNav from "../SideNav/SideNav"
 import styles from "./Header.module.scss"
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false)
   return (
-    <div className={styles.container}>
+    <header className={styles.container}>
+      <SideNav isOpen={isOpen} setIsOpen={setIsOpen} />
       <div className={styles.leftContainer}>
         <div className={styles.nameContainer}>
           <span className={styles.circle}>S</span>
@@ -20,9 +23,9 @@ const Header = () => {
           <li>Blog</li>
           <li>Contact Me</li>
         </ul>
-        <i class="fas fa-bars"></i>
+        <i class="fas fa-bars" onClick={() => setIsOpen(!isOpen)} ></i>
       </div>
-    </div>
+    </header>
   )
 }
 
