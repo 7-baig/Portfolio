@@ -6,7 +6,7 @@ const SideNav = ({ isOpen }) => {
   return (
     <div
       className={styles.container}
-      style={isOpen ? { right: "0px" } : { right: "-280px" }}
+      style={isOpen ? { right: "0px" } : { right: "-320px" }}
 >
       <div className={styles.row}>
           <div className={styles.left}>
