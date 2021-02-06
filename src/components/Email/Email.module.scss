@@ -1,0 +1,86 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 90px;
+  h1 {
+    color: var(--primary-color);
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+  form {
+      display: flex;
+      flex-direction: column;
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      .leftContainer {
+        width: 48%;
+        .field {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 25px;
+          label {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+          }
+          input {
+            padding: 14px 5px;
+            border: 1px solid #666666;
+            box-shadow: 0 1px 2px 0px rgb(0 0 0 / 10%);
+            color: var(--primary-color);
+            font-size: 14px;
+            transition: all 0.5s ease-out;
+            &:focus {
+                border: 1px solid var(--secondary-color);
+            }
+          }
+        }
+      }
+      .rightContainer {
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        .field {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          width: 100%;
+          margin-bottom: 25px;
+          label {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+          }
+          textarea {
+            padding: 14px 5px;
+            height: 100%;
+            border: 1px solid #666666;
+            box-shadow: 0 1px 2px 0px rgb(0 0 0 / 10%);
+            color: var(--primary-color);
+            font-size: 14px;
+            transition: all 0.3s ease-out;
+            &:focus {
+                border: 1px solid var(--secondary-color);
+            }
+          }
+        }
+      }
+    }
+  }
+  button {
+      align-self: flex-end;
+      border: none;
+      background: var(--secondary-color);
+      border: 2px solid var(--secondary-color);
+      color: #ffffff;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 3px;
+      transition: all 0.3s ease-out;
+      cursor: pointer;
+      &:hover {
+        background: none;
+        border: 2px solid var(--secondary-color);
+        color: var(--primary-color);
+      }
+  }
+}
