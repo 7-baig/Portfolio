@@ -15,77 +15,86 @@
     padding: 0px 90px;
     .project {
       width: 33.333%;
+      height: 300px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      position: relative;
       img {
+        position: relative;
         width: 100%;
         height: 100%;
-        transition: animation 0.3s ease-out;
+        opacity: 1;
+        transition: all 500ms ease-in-out;
       }
       h3 {
-        display: none;
-        transition: animation 0.3s ease-in-out;
+        opacity: 0;
+        transition: all 400ms ease-in-out;
+        top: 70px;
+        position: absolute;
       }
       p {
-        display: none;
-        transition: animation 0.3s ease-in-out;
+        opacity: 0;
+        transition: all 400ms ease-in-out;
+        top: 100px;
+        position: absolute;
       }
       button {
-        display: none;
+        bottom: 70px;
+        position: absolute;
+        z-index: 1;
+        opacity: 0;
         padding: 10px 30px;
         font-size: 14px;
         text-transform: uppercase;
         color: var(--primary-color);
         background: none;
         border: 2px solid var(--secondary-color);
-        transition: all 0.3s ease-in-out;
+        transition: all 400ms ease-in-out;
         cursor: pointer;
         &:hover {
           color: #ffffff;
           background-color: var(--secondary-color);
         }
       }
+      &:hover img {
+        opacity: 0;
+      }
       &:hover h3 {
-        display: block;
-        margin-bottom: 5px;
-        animation: move-down_1 1200ms forwards;
+        opacity: 1;
+        animation: move-down_1 1200ms normal;
       }
       &:hover p {
-        display: block;
-        margin-bottom: 40px;
-        animation: move-down_2 1200ms forwards;
+        opacity: 1;
+        animation: move-down_2 1200ms normal;
       }
       &:hover button {
-        display: block;
-        animation: move-up 1200ms forwards;
-      }
-      &:hover img {
-        display: none;
+        opacity: 1;
+        animation: move-up 1200ms normal;
       }
       @keyframes move-down_1 {
         0% {
-          margin-bottom: 50px;
+          top: 0px;
         }
         100% {
-          margin-bottom: 5px;
+          top: 70px;
         }
       }
       @keyframes move-down_2 {
         0% {
-          margin-bottom: 50px;
+          top: 0px;
         }
         100% {
-          margin-bottom: 40px;
+          top: 100px;
         }
       }
       @keyframes move-up {
         0% {
-          margin-top: 50px;
+          bottom: 0px;
         }
         100% {
-          margin-top: 0px;
+          bottom: 70px;
         }
       }
     }
