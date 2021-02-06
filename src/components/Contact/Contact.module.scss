@@ -1,5 +1,5 @@
 .container {
-  padding: 50px 90px;
+  padding: 80px 90px;
   display: flex;
   .leftContainer {
     width: 50%;
@@ -69,7 +69,7 @@
 
 @media screen and (max-width: 767px) {
   .container {
-    padding: 50px 20px;
+    padding: 80px 20px;
     display: flex;
     flex-direction: column;
     .leftContainer {
