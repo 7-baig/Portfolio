@@ -17,13 +17,23 @@ const Header = () => {
       </div>
       <div className={styles.rightContainer}>
         <ul>
-          <li>Skills</li>
-          <li>Work Experiences</li>
-          <li>Projects</li>
-          <li>Blog</li>
-          <li>Contact Me</li>
+          <a href="#skills">
+            <li>Skills</li>
+          </a>
+          <a href="#experience">
+            <li>Work Experiences</li>
+          </a>
+          <a href="#projects">
+            <li>Projects</li>
+          </a>
+          <a href="#blogs">
+            <li>Blog</li>
+          </a>
+          <a href="#contact">
+            <li>Contact Me</li>
+          </a>
         </ul>
-        <i class="fas fa-bars" onClick={() => setIsOpen(!isOpen)} ></i>
+        <i class="fas fa-bars" onClick={() => setIsOpen(!isOpen)}></i>
       </div>
     </header>
   )

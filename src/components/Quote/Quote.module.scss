@@ -11,6 +11,13 @@
     p:nth-child(1) {
         margin-bottom: 5px;
     }
+    p:nth-child(2) {
+        margin-bottom: 20px;
+    }
+    hr {
+        border: 1px solid #66666627;
+        width: 100%;
+    }
 }
 @media screen and (max-width: 767px) {
     .container {

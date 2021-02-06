@@ -6,6 +6,7 @@ const Quote = ({ quote, author }) => {
         <div className={styles.container}>
             <p>"{quote}"</p>
             <p>-{author}</p>
+            <hr/>
         </div>
     )
 }

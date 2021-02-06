@@ -12,7 +12,12 @@
   outline: none;
 }
 
-body {
+html, body {
   // font-family: 'Poppins', sans-serif;
   font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: unset;
 }

@@ -8,7 +8,7 @@ import styles from "./Contact.module.scss"
 
 const Contact = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="contact">
       <div className={styles.leftContainer}>
         <div className={styles.content}>
           <h1>Contact me</h1>

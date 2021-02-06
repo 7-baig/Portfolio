@@ -6,7 +6,7 @@ import styles from "./Projects.module.scss"
 
 const Projects = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="projects" >
       <h1>Projects</h1>
       <Quote
         quote="You can do anything you set your mind to."
