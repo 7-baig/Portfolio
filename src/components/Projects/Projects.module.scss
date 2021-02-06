@@ -40,7 +40,7 @@
         color: var(--primary-color);
         background: none;
         border: 2px solid var(--secondary-color);
-        transition: animation 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         cursor: pointer;
         &:hover {
           color: #ffffff;
@@ -87,6 +87,30 @@
         100% {
           margin-top: 0px;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 50px 0px;
+    h1 {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+    .projectsContainer {
+      display: flex;
+      flex-direction: column;
+      padding: 0px 0px;
+      .project {
+        width: 100%;
+        max-width: 500px;
+        height: 280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
