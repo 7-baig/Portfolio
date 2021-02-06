@@ -16,13 +16,18 @@
     }
     hr {
         border: 1px solid #66666627;
-        width: 100%;
+        width: 500px;
     }
 }
 @media screen and (max-width: 767px) {
     .container {
+        padding: 0px 10px;
         p {
             font-size: 16px;
+            text-align: center;
+        }
+        hr {
+            width: 250px;
         }
     }
 }
