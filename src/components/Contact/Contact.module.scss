@@ -1,0 +1,68 @@
+.container {
+  padding: 50px 90px;
+  display: flex;
+  .leftContainer {
+    width: 50%;
+    display: flex;
+    .content {
+      h1 {
+        color: var(--primary-color);
+        text-transform: uppercase;
+        font-size: 45px;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 24px;
+        color: var(--primary-color);
+        margin-bottom: 30px;
+      }
+      .socialContainer {
+        .social {
+          display: flex;
+          align-items: center;
+          margin: 20px 0px;
+          cursor: pointer;
+          &:hover {
+            opacity: 0.6;
+          }
+          img {
+            width: 40px;
+            margin-right: 10px;
+          }
+          p {
+            font-size: 18px;
+            margin-bottom: 0px;
+          }
+          .fb {
+            color: #1877f2;
+          }
+          .twitter {
+            color: #1da1f2;
+          }
+          .git {
+            color: #181717;
+          }
+          .linkedin {
+            color: #0077b5;
+          }
+        }
+      }
+    }
+  }
+  .rightContainer {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 50%;
+      border-radius: 50%;
+      border: 0.5rem solid var(--secondary-color);
+      transition: all 0.3s ease-out;
+      box-shadow: 0 30px 30px -30px #000;
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+}
