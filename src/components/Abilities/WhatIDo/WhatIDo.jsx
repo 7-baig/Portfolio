@@ -20,7 +20,7 @@ const WhatIDo = () => {
         </div>
         <div className={styles.row}>
           <i className={styles.icon + " fas fa-bolt"}></i>
-          <p>Transform Design into React High Quality Code.</p>
+          <p>Transform Design into High Quality Code.</p>
         </div>
         <div className={styles.row}>
           <i className={styles.icon + " fas fa-bolt"}></i>
