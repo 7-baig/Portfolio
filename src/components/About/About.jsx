@@ -20,19 +20,29 @@ const About = () => {
         <p>Full-Stack Developer</p>
         <h1>Saad Baig</h1>
         <p>
-          Hi, I'm a Full-Stack Web developer from Pakistan{" "}
-          <img className={styles.icon} src={flag} alt="pakistan-flag" />,
+          Hi, I'm a Full-Stack Web developer from Pakistan
+          {/* <img className={styles.icon} src={flag} alt="pakistan-flag" /> */}
+          ,
           working with web technologies{" "}
-          <img className={styles.icon} src={desktop} alt="desktop-icon" /> for
+          {/* <img className={styles.icon} src={desktop} alt="desktop-icon" />  */}
+          for
           2+ years. When I'm not Coding{" "}
-          <img className={styles.icon} src={laptop} alt="laptop" />, writing
-          articles <img className={styles.icon} src={write} alt="writing" /> or
+          {/* <img className={styles.icon} src={laptop} alt="laptop" /> */}
+          , writing
+          articles 
+          {/* <img className={styles.icon} src={write} alt="writing" />  */}
+          or
           tweeting{" "}
-          <img className={styles.icon} src={twitter} alt="twitter-icon" />,
+          {/* <img className={styles.icon} src={twitter} alt="twitter-icon" /> */}
+          ,
           you'll find me reading books{" "}
-          <img className={styles.icon} src={books} alt="books" />, drawing{" "}
-          <img className={styles.icon} src={drawing} alt="drawing-icon" /> and
-          travelling <img className={styles.icon} src={plane} alt="plane" />.
+          {/* <img className={styles.icon} src={books} alt="books" /> */}
+          , drawing{" "}
+          {/* <img className={styles.icon} src={drawing} alt="drawing-icon" /> */}
+           and
+          travelling 
+          {/* <img className={styles.icon} src={plane} alt="plane" /> */}
+          .
         </p>
         <div className={styles.btnContainer}>
           <button>Download CV</button>
