@@ -10,3 +10,13 @@
     margin-bottom: 20px;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 40px 0px;
+    h1 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+  }
+}

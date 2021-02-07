@@ -40,6 +40,7 @@ const Experiences = () => {
           },
         ]}
       />
+      <hr />
       <Template
         title="Career"
         row={[

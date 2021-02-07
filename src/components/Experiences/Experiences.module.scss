@@ -9,4 +9,18 @@
     font-size: 45px;
     margin-bottom: 20px;
   }
+  hr {
+    border: 1px solid #66666627;
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 40px 0px;
+    h1 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+  }
 }
