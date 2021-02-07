@@ -52,3 +52,44 @@
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    padding: 10px 20px;
+    .leftContainer {
+      width: 100%;
+      position: static;
+      img {
+        width: 100%;
+        position: static;
+        pointer-events: none;
+      }
+      .eye {
+        display: none;
+      }
+    }
+    .rightContainer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      h1 {
+        margin-bottom: 15px;
+        font-size: 26px;
+        width: 80%;
+      }
+      .fact {
+        margin: 5px 0px;
+        img {
+          width: 25px;
+          margin-right: 8px;
+        }
+        p {
+          font-size: 16px;
+          line-height: 24px;
+          width: 85%;
+        }
+      }
+    }
+  }
+}
