@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding: 90px 0px;
+  .leftContainer {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    img {
+      cursor: pointer;
+      width: 85%;
+      position: absolute;
+      transition: all 0.5s;
+    }
+    .eye {
+      opacity: 0;
+    }
+    .pizza {
+      z-index: 2;
+      &:hover + .eye {
+        opacity: 1;
+      }
+      &:hover {
+        opacity: 0;
+      }
+    }
+  }
+  .rightContainer {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    h1 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+    .fact {
+      margin: 8px 0px;
+      display: flex;
+      align-items: center;
+      img {
+        width: 30px;
+        margin-right: 8px;
+      }
+      p {
+        font-size: 18px;
+        color: var(--primary-color);
+        line-height: 26px;
+        width: 80%;
+      }
+    }
+  }
+}
