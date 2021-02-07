@@ -14,9 +14,19 @@ const Template = ({ title, row }) => {
           <div className={styles.rightContainer}>
             <h4>{row.level}</h4>
             <p>{row.description}</p>
-            <p>
-              <i className={"fas fa-map-marker-alt"}></i> {row.location}
-            </p>
+            {row.website ? (
+              <p>
+                <a href={row.website} target="_blank">
+                  <i className={"fas fa-map-marker-alt"}></i> {row.location}
+                  &nbsp; | &nbsp;
+                  <i className={"fas fa-globe"}></i> {row.website}
+                </a>
+              </p>
+            ) : (
+              <p>
+                <i className={"fas fa-map-marker-alt"}></i> {row.location}
+              </p>
+            )}
           </div>
         </div>
       ))}
