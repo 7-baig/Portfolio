@@ -1,15 +1,19 @@
 import React from "react"
 import Quote from "../Quote/Quote"
-import styles from "./Experiences.module.scss"
 import Template from "./Template/Template"
+import laptop from "../../images/icons/laptop.png"
+import styles from "./Experiences.module.scss"
 
 const Experiences = () => {
   return (
     <div className={styles.container} id="experience">
-      <h1>Experiences</h1>
+      <div className={styles.header}>
+        <h1>Experiences</h1>
+        <img src={laptop} alt="laptop" />
+      </div>
       <Quote
-        quote="Protons give an atom its identity, electrons its personality."
-        author="Bill Bryson"
+        quote="View life as a continuous learning experience."
+        author="Denis Waitley"
       />
       <Template
         title="Education"

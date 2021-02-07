@@ -1,12 +1,16 @@
 import React from "react"
 import sample from "../../images/blogs/blog.jpg"
 import Quote from "../Quote/Quote"
+import write from "../../images/icons/write.png"
 import styles from "./Blogs.module.scss"
 
 const Blogs = () => {
   return (
     <div className={styles.container} id="blogs">
-      <h1>Blogs</h1>
+      <div className={styles.header}>
+        <h1>Blogs</h1>
+        <img src={write} alt="write" />
+      </div>
       <Quote
         quote="A writer is working when he’s staring out of the window."
         author="Burton Rascoe"

@@ -2,12 +2,16 @@ import React from "react"
 import sample from "../../images/projects/project.png"
 import quiz from "../../images/projects/quiz.jpg"
 import Quote from "../Quote/Quote"
+import rocket from "../../images/projects/rocket.png"
 import styles from "./Projects.module.scss"
 
 const Projects = () => {
   return (
-    <div className={styles.container} id="projects" >
-      <h1>Projects</h1>
+    <div className={styles.container} id="projects">
+      <div className={styles.header}>
+        <h1>Projects</h1>
+        <img src={rocket} alt="rocket" />
+      </div>
       <Quote
         quote="You can do anything you set your mind to."
         author="Benjamin Franklin"
