@@ -7,7 +7,7 @@ const Email = () => {
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
   return (
-    <Fade bottom>
+    <Fade>
       <div className={styles.container}>
         <h1>Send me an email</h1>
         <form>
