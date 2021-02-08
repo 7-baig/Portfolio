@@ -1,16 +1,13 @@
-import React, { useState } from "react"
-import SideNav from "../SideNav/SideNav"
+import React from "react"
 import Headroom from "react-headroom"
 import { Link } from "gatsby"
 import styles from "./Header.module.scss"
 
-const Header = () => {
-  const [isOpen, setIsOpen] = useState(false)
+const Header = ({ isOpen, setIsOpen }) => {
 
   return (
     <Headroom>
       <header className={styles.container}>
-        <SideNav isOpen={isOpen} setIsOpen={setIsOpen} />
         <div className={styles.leftContainer}>
           <div className={styles.nameContainer}>
             <span className={styles.circle}>S</span>

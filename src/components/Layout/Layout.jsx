@@ -1,12 +1,14 @@
-import React from "react"
+import React, { useState } from "react"
 import Footer from "./Footer/Footer"
+import SideNav from "./SideNav/SideNav"
 import Header from "./Header/Header"
-import styles from "./Layout.module.scss"
 
 const Layout = ({ children }) => {
+  const [isOpen, setIsOpen] = useState(false)
   return (
     <>
-      <Header />
+      <Header isOpen={isOpen} setIsOpen={setIsOpen} />
+      <SideNav isOpen={isOpen} setIsOpen={setIsOpen} />
       {children}
       <Footer />
     </>
