@@ -1,64 +1,46 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import SideNav from "../SideNav/SideNav"
-import useDocumentScrollThrottled from '../../../components/useDocumentScrollThrottled/useDocumentScrollThrottled'
+import Headroom from "react-headroom"
+import { Link } from "gatsby"
 import styles from "./Header.module.scss"
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
 
-  const [shouldHideHeader, setShouldHideHeader] = useState(false);
-  const [shouldShowShadow, setShouldShowShadow] = useState(false);
-
-  const MINIMUM_SCROLL = 80;
-  const TIMEOUT_DELAY = 400;
-
-  useDocumentScrollThrottled(callbackData => {
-    const { previousScrollTop, currentScrollTop } = callbackData;
-    const isScrolledDown = previousScrollTop < currentScrollTop;
-    const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;
-
-    setShouldShowShadow(currentScrollTop > 2);
-
-    setTimeout(() => {
-      setShouldHideHeader(isScrolledDown && isMinimumScrolled);
-    }, TIMEOUT_DELAY);
-  });
-  
-  const shadowStyle = shouldShowShadow ? 'shadow' : '';
-  const hiddenStyle = shouldHideHeader ? 'hidden' : styles.container;
-
   return (
-    <header className={`${shadowStyle} ${hiddenStyle}`}>
-      <SideNav isOpen={isOpen} setIsOpen={setIsOpen} />
-      <div className={styles.leftContainer}>
-        <div className={styles.nameContainer}>
-          <span className={styles.circle}>S</span>
-          <p>
-            <span>Saad</span> Baig
-          </p>
+    <Headroom>
+      <header className={styles.container}>
+        <SideNav isOpen={isOpen} setIsOpen={setIsOpen} />
+        <div className={styles.leftContainer}>
+          <div className={styles.nameContainer}>
+            <span className={styles.circle}>S</span>
+            <p>
+              <span>Saad</span> Baig
+            </p>
+          </div>
         </div>
-      </div>
-      <div className={styles.rightContainer}>
-        <ul>
-          <a href="#skills">
-            <li>Skills</li>
-          </a>
-          <a href="#experience">
-            <li>Experiences</li>
-          </a>
-          <a href="#projects">
-            <li>Projects</li>
-          </a>
-          <a href="#blogs">
-            <li>Blog</li>
-          </a>
-          <a href="#contact">
-            <li>Contact Me</li>
-          </a>
-        </ul>
-        <i class="fas fa-bars" onClick={() => setIsOpen(!isOpen)}></i>
-      </div>
-    </header>
+        <div className={styles.rightContainer}>
+          <ul>
+            <li>
+              <Link to="#skills">Skills</Link>
+            </li>
+            <li>
+              <Link to="#experience">Experiences</Link>
+            </li>
+            <li>
+              <Link to="#projects">Projects</Link>
+            </li>
+            <li>
+              <Link to="#blogs">Blog</Link>
+            </li>
+            <li>
+              <Link to="#contact">Contact Me</Link>
+            </li>
+          </ul>
+          <i class="fas fa-bars" onClick={() => setIsOpen(!isOpen)}></i>
+        </div>
+      </header>
+    </Headroom>
   )
 }
 

@@ -1,25 +1,13 @@
-.hiddenStyle {
-  // transform: translateY(-110%);
-  display: none;
-  transition: transform 0.5s ease;
-}
-.shadow {
-  box-shadow: 0 9px 9px -9px rgba(0, 0, 0, 0.13);
-}
 .container {
+  background: #fff;
+  max-width: 100%;
+  margin: 0px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 0px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 25;
-  background: #ffffff;
-  // transform: translateY(0);
+  // z-index: 25;
   display: flex;
-  transition: transform 0.5s ease;
   .leftContainer {
     width: 50%;
     display: flex;
@@ -58,6 +46,7 @@
     width: 50%;
     padding-right: 40px;
     ul {
+      overflow: hidden;
       display: flex;
       align-items: center;
       li {
