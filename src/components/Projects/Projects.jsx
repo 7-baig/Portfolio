@@ -1,8 +1,12 @@
 import React from "react"
 import sample from "../../images/projects/project.png"
 import quiz from "../../images/projects/quiz.jpg"
-import Quote from "../Quote/Quote"
 import rocket from "../../images/projects/rocket.png"
+import cart from "../../images/projects/cart.jpg"
+import limo from "../../images/projects/limo.jpg"
+import football from "../../images/projects/football.jpg"
+import restaurant from "../../images/projects/restaurant.jpg"
+import Quote from "../Quote/Quote"
 import styles from "./Projects.module.scss"
 
 const Projects = () => {
@@ -20,40 +24,105 @@ const Projects = () => {
         <div className={styles.project}>
           <img src={sample} alt="sample" />
           <h3 className={styles.show}>E-Commerce Application</h3>
-          <p>React JS / Node JS</p>
-          <button>Learn More</button>
+          <p>React/Redux - Node - MongoDB - Express</p>
+          <button>
+            <a
+              href="https://github.com/7-baig/MERN_E-COMMERCE_APP"
+              target="_blank"
+            >
+              View site
+            </a>
+          </button>
+          <button>
+            <a
+              href="https://github.com/7-baig/MERN_E-COMMERCE_APP"
+              target="_blank"
+            >
+              Github Repo
+            </a>
+          </button>
+        </div>
+        <div className={styles.project}>
+          <img src={cart} alt="cart" />
+          <h3 className={styles.show}>On-Cart Admin</h3>
+          <p>React/Redux - Bootstrap</p>
+          <button>
+            <a href="https://oncartadmin.web.app/" target="_blank">
+              View site
+            </a>
+          </button>
+        </div>
+        <div className={styles.project}>
+          <img src={limo} alt="limo" />
+          <h3 className={styles.show}>Admirals Admin</h3>
+          <p>React-Redux / Bootstrap / Node</p>
+          <button>
+            <a href="https://quiz-app-bc10d.web.app/" target="_blank">
+              View site
+            </a>
+          </button>
         </div>
         <div className={styles.project}>
           <img src={quiz} alt="quiz" />
-          <h3 className={styles.show}>E-Commerce Application</h3>
-          <p>React JS / Node JS</p>
-          <button>Learn More</button>
+          <h3 className={styles.show}>Quiz App (PWA)</h3>
+          <p>React JS - TypeScript - PWA</p>
+          <button>
+            <a href="https://quiz-app-bc10d.web.app/" target="_blank">
+              View site
+            </a>
+          </button>
+          <button>
+            <a href="https://github.com/7-baig/Quiz-PWA" target="_blank">
+              Github Repo
+            </a>
+          </button>
         </div>
         <div className={styles.project}>
-          <img src={sample} alt="sample" />
-          <h3 className={styles.show}>E-Commerce Application</h3>
-          <p>React JS / Node JS</p>
-          <button>Learn More</button>
+          <img src={football} alt="football" />
+          <h3 className={styles.show}>Covid-19 tracker App</h3>
+          <p>React / Charts JS / Material UI</p>
+          <button>
+            <a
+              href="http://covid-19-tracker-app-saad-baig.surge.sh/"
+              target="_blank"
+            >
+              View site
+            </a>
+          </button>
+          <button>
+            <a
+              href="https://github.com/7-baig/Covid-19-Tracker-App"
+              target="_blank"
+            >
+              Github Repo
+            </a>
+          </button>
         </div>
         <div className={styles.project}>
-          <img src={quiz} alt="quiz" />
-          <h3 className={styles.show}>E-Commerce Application</h3>
-          <p>React JS / Node JS</p>
-          <button>Learn More</button>
-        </div>
-        <div className={styles.project}>
-          <img src={sample} alt="sample" />
-          <h3 className={styles.show}>E-Commerce Application</h3>
-          <p>React JS / Node JS</p>
-          <button>Learn More</button>
-        </div>
-        <div className={styles.project}>
-          <img src={quiz} alt="quiz" />
-          <h3 className={styles.show}>E-Commerce Application</h3>
-          <p>React JS / Node JS</p>
-          <button>Learn More</button>
+          <img src={restaurant} alt="restaurant" />
+          <h3 className={styles.show}>Restaurant Website</h3>
+          <p>HTML5 - CSS3 - Javascript</p>
+          <button>
+            <a
+              href="https://7-baig.github.io/Restaurant-Website/"
+              target="_blank"
+            >
+              View site
+            </a>
+          </button>
+          <button>
+            <a
+              href="https://github.com/7-baig/Restaurant-Website"
+              target="_blank"
+            >
+              Github Repo
+            </a>
+          </button>
         </div>
       </div>
+      <a href="https://github.com/7-baig?tab=repositories" target="_blank">
+        <button className={styles.viewAll}>View all projects</button>
+      </a>
     </div>
   )
 }

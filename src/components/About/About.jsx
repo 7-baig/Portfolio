@@ -1,19 +1,12 @@
 import React from "react"
 import vector from "../../images/about.svg"
-import desktop from "../../images/icons/desktop.png"
-import plane from "../../images/icons/plane.png"
-import flag from "../../images/icons/pakistan-flag.png"
-import write from "../../images/icons/write.png"
-import books from "../../images/icons/books.png"
-import laptop from "../../images/icons/laptop.png"
-import drawing from "../../images/icons/drawing.png"
-import twitter from "../../images/icons/twitter.png"
 import astronaut from "../../images/facts/astronaut.png"
+import { Link } from 'gatsby'
 import styles from "./About.module.scss"
 
 const About = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="about">
       <div className={styles.leftContainer}>
         <img src={vector} alt="developer" />
       </div>
@@ -24,26 +17,17 @@ const About = () => {
           <img src={astronaut} alt="astronaut" />
         </div>
         <p>
-          Hi, I'm a Full-Stack Web developer from Pakistan
-          {/* <img className={styles.icon} src={flag} alt="pakistan-flag" /> */}
-          , working with web technologies{" "}
-          {/* <img className={styles.icon} src={desktop} alt="desktop-icon" />  */}
-          for 2+ years. When I'm not Coding{" "}
-          {/* <img className={styles.icon} src={laptop} alt="laptop" /> */},
-          writing articles{" "}
-          {/* <img className={styles.icon} src={write} alt="writing" />  */}
-          or tweeting,{" "}
-          {/* <img className={styles.icon} src={twitter} alt="twitter-icon" /> */}
-          you'll find me reading books,{" "}
-          {/* <img className={styles.icon} src={books} alt="books" /> */}
-          drawing{" "}
-          {/* <img className={styles.icon} src={drawing} alt="drawing-icon" /> */}
-          and travelling
-          {/* <img className={styles.icon} src={plane} alt="plane" /> */}.
+          Hi, I'm a Full-Stack Web developer from Pakistan , working with web
+          technologies for 2+ years. When I'm not Coding, tweeting or writing articles
+          you'll find me reading books, drawing and travelling
         </p>
         <div className={styles.btnContainer}>
-          <button>Download CV</button>
-          <button>Contact Me</button>
+          <a href="../../images/icons/books.png" download>
+            <button>Download CV</button>
+          </a>
+          <Link to="#contact">
+            <button className={styles.contactBtn}>Contact Me</button>
+          </Link>
         </div>
       </div>
     </div>

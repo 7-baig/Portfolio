@@ -73,12 +73,14 @@
           background-color: var(--secondary-color);
         }
       }
-      button:nth-child(2) {
-        border: 2px solid var(--primary-color);
-        color: var(--primary-color);
-        &:hover {
-          color: #ffffff;
-          background-color: var(--primary-color);
+      a {
+        .contactBtn {
+          border: 2px solid var(--primary-color);
+          color: var(--primary-color);
+          &:hover {
+            color: #ffffff;
+            background-color: var(--primary-color);
+          }
         }
       }
     }

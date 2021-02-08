@@ -4,17 +4,18 @@ import { Link } from "gatsby"
 import styles from "./Header.module.scss"
 
 const Header = ({ isOpen, setIsOpen }) => {
-
   return (
     <Headroom>
       <header className={styles.container}>
         <div className={styles.leftContainer}>
-          <div className={styles.nameContainer}>
-            <span className={styles.circle}>S</span>
-            <p>
-              <span>Saad</span> Baig
-            </p>
-          </div>
+          <Link to="#about">
+            <div className={styles.nameContainer}>
+              <span className={styles.circle}>S</span>
+              <p>
+                <span>Saad</span> Baig
+              </p>
+            </div>
+          </Link>
         </div>
         <div className={styles.rightContainer}>
           <ul>
