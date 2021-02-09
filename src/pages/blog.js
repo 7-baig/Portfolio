@@ -12,6 +12,7 @@ const Blog = () => {
           edges {
             node {
               title
+              author
               slug
               publishedDate(formatString: "D MMMM YYYY")
               heroImage {
@@ -35,7 +36,15 @@ const Blog = () => {
     <Layout>
       <div className={styles.container}>
         {data.allContentfulBlog.edges.map(post => (
-          <BlogPost slug={post.node.slug} />
+          <BlogPost
+            slug={post.node.slug}
+            title={post.node.title}
+            author={post.node.author}
+            description={post.node.description}
+            heroImage={post.node.heroImage.file.url}
+            imgDescription={post.node.heroImage.description}
+            date={post.node.publishedDate}
+          />
         ))}
         <hr className={styles.sep} />
       </div>
