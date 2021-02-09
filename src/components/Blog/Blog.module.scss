@@ -30,7 +30,7 @@
     align-self: flex-end;
     border: none;
     background: none;
-    border: 2px solid var(--secondary-color);
+    border: 2px solid var(--primary-color);
     padding: 15px 30px;
     font-size: 18px;
     border-radius: 3px;
@@ -38,8 +38,8 @@
     cursor: pointer;
     color: var(--primary-color);
     &:hover {
-      background: var(--secondary-color);
-      border: 2px solid var(--secondary-color);
+      background: var(--primary-color);
+      border: 2px solid var(--primary-color);
       color: #ffffff;
     }
   }

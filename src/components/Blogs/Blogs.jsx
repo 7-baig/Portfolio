@@ -3,6 +3,7 @@ import sample from "../../images/blogs/blog.jpg"
 import Quote from "../Quote/Quote"
 import write from "../../images/icons/write.png"
 import Fade from "react-reveal/Fade"
+import { Link } from "gatsby"
 import styles from "./Blogs.module.scss"
 
 const Blogs = () => {
@@ -59,6 +60,9 @@ const Blogs = () => {
             </p>
           </div>
         </div>
+        <Link to="/blog">
+          <button className={styles.viewAll}>View all blogs</button>
+        </Link>
       </div>
     </Fade>
   )

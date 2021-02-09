@@ -1,11 +1,14 @@
 import React from "react"
 import sample from "../../images/projects/restaurant.jpg"
+import { Link } from "gatsby"
 import styles from "./Blog.module.scss"
 
-const Blog = () => {
+const Blog = ({ slug }) => {
   return (
     <div className={styles.container}>
-      <h1>UI design books you should read in 2021</h1>
+      <Link to={`/blog/${slug}`}>
+        <h1>UI design books you should read in 2021</h1>
+      </Link>
       <hr className={styles.separator} />
       <div className={styles.details}>
         <p>By Saad Baig</p>
@@ -21,7 +24,9 @@ const Blog = () => {
         users. The result is an interface that’s simple, beautiful and easy to
         use.
       </p>
-      <button>Read More</button>
+      <Link to={`/blog/${slug}`}>
+        <button>Read More</button>
+      </Link>
     </div>
   )
 }
