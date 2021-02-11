@@ -3,10 +3,36 @@ import sample from "../../images/blogs/blog.jpg"
 import Quote from "../Quote/Quote"
 import write from "../../images/icons/write.png"
 import Fade from "react-reveal/Fade"
-import { Link } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import styles from "./Blogs.module.scss"
 
 const Blogs = () => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        allContentfulArticle {
+          edges {
+            node {
+              title
+              author
+              slug
+              publishedDate(formatString: "D MMMM YYYY")
+              image {
+                file {
+                  url
+                }
+                description
+              }
+              description
+              body {
+                body
+              }
+            }
+          }
+        }
+      }
+    `
+  )
   return (
     <Fade bottom>
       <div className={styles.container} id="blogs">
@@ -19,46 +45,17 @@ const Blogs = () => {
           author="Burton Rascoe"
         />
         <div className={styles.blogsContainer}>
-          <div className={styles.blog}>
-            <img src={sample} alt="sample-image" />
-            <h3>Breaking Your Coder's Block</h3>
-            <small>May 14, 2019</small>
-            <hr />
-            <p>
-              Lorem ipsum dolor sit amet, adipisicing elit. Voluptatem quam
-              repellendus accusantium quis dolore.
-            </p>
-          </div>
-          <div className={styles.blog}>
-            <img src={sample} alt="sample-image" />
-            <h3>Breaking Your Coder's Block</h3>
-            <small>May 14, 2019</small>
-            <hr />
-            <p>
-              Lorem ipsum dolor sit amet, adipisicing elit. Voluptatem quam
-              repellendus accusantium quis dolore.
-            </p>
-          </div>
-          <div className={styles.blog}>
-            <img src={sample} alt="sample-image" />
-            <h3>Breaking Your Coder's Block</h3>
-            <small>May 14, 2019</small>
-            <hr />
-            <p>
-              Lorem ipsum dolor sit amet, adipisicing elit. Voluptatem quam
-              repellendus accusantium quis dolore.
-            </p>
-          </div>
-          <div className={styles.blog}>
-            <img src={sample} alt="sample-image" />
-            <h3>Breaking Your Coder's Block</h3>
-            <small>May 14, 2019</small>
-            <hr />
-            <p>
-              Lorem ipsum dolor sit amet, adipisicing elit. Voluptatem quam
-              repellendus accusantium quis dolore.
-            </p>
-          </div>
+          {data.allContentfulArticle.edges.map(post => (
+            <Link to={`/blog/${post.node.slug}`}>
+              <div className={styles.blog}>
+                <img src={sample} alt="sample-image" />
+                <h3>{post.node.title}</h3>
+                <small>{post.node.publishedDate}</small>
+                <hr />
+                <p>{post.node.description}</p>
+              </div>
+            </Link>
+          ))}
         </div>
         <Link to="/blog">
           <button className={styles.viewAll}>View all blogs</button>

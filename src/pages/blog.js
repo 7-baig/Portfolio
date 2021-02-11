@@ -1,7 +1,7 @@
 import React from "react"
 import BlogPost from "../components/Blog/Blog"
 import Layout from "../components/Layout/Layout"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import styles from "../styles/blog.module.scss"
 
 const Blog = () => {
@@ -31,7 +31,6 @@ const Blog = () => {
       }
     `
   )
-  console.log(data)
   return (
     <Layout>
       <div className={styles.container}>
