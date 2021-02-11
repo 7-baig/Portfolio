@@ -26,7 +26,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
-  `);
+  `)
 
   res.data.allContentfulArticle.edges.forEach((edge) => {
     createPage({
