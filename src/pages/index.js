@@ -11,7 +11,7 @@ import Projects from "../components/Projects/Projects"
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout primary={true}>
       <About />
       <Abilities />
       <Experiences />

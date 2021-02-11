@@ -32,7 +32,7 @@ const Blog = () => {
     `
   )
   return (
-    <Layout>
+    <Layout secondary={true}>
       <div className={styles.container}>
         {data.allContentfulArticle.edges.map(post => (
           <BlogPost
