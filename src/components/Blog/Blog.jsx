@@ -5,7 +5,7 @@ import styles from "./Blog.module.scss"
 const Blog = ({ slug, title, description, heroImage, imgDescription, date, author }) => {
   return (
     <div className={styles.container}>
-      <Link to={`/blog/${slug}`}>
+      <Link to={`/Portfolio/blog/${slug}`}>
         <h1>{title}</h1>
       </Link>
       <hr className={styles.separator} />
@@ -16,7 +16,7 @@ const Blog = ({ slug, title, description, heroImage, imgDescription, date, autho
       </div>
       <img src={heroImage} alt={imgDescription} />
       <p className={styles.description}>{description}</p>
-      <Link to={`/blog/${slug}`}>
+      <Link to={`/Portfolio/blog/${slug}`}>
         <button>Read More</button>
       </Link>
     </div>
