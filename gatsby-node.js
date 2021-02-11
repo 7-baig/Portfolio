@@ -2,7 +2,7 @@ const path = require("path");
 module.exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions;
 
-  if (node.internal.type === "ContentfulBlog") {
+  if (node.internal.type === "ContentfulArticle") {
     createNodeField({
       node,
       name: "slug",
@@ -18,7 +18,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
   const res = await graphql(`
     query {
-        allContentfulBlog {
+        allContentfulArticle {
         edges {
           node {
             slug
@@ -28,7 +28,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
     }
   `);
 
-  res.data.allContentfulBlog.edges.forEach((edge) => {
+  res.data.allContentfulArticle.edges.forEach((edge) => {
     createPage({
       component: blogTemplate,
       path: `/blog/${edge.node.slug}`,

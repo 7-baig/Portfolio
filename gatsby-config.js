@@ -5,7 +5,6 @@ require("dotenv").config({
 module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
-    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -13,5 +12,6 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    `gatsby-transformer-remark`,
   ],
 }

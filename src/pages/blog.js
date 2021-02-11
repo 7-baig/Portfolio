@@ -8,14 +8,14 @@ const Blog = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        allContentfulBlog {
+        allContentfulArticle {
           edges {
             node {
               title
               author
               slug
               publishedDate(formatString: "D MMMM YYYY")
-              heroImage {
+              image {
                 file {
                   url
                 }
@@ -23,7 +23,7 @@ const Blog = () => {
               }
               description
               body {
-                raw
+                body
               }
             }
           }
@@ -35,14 +35,14 @@ const Blog = () => {
   return (
     <Layout>
       <div className={styles.container}>
-        {data.allContentfulBlog.edges.map(post => (
+        {data.allContentfulArticle.edges.map(post => (
           <BlogPost
             slug={post.node.slug}
             title={post.node.title}
             author={post.node.author}
             description={post.node.description}
-            heroImage={post.node.heroImage.file.url}
-            imgDescription={post.node.heroImage.description}
+            heroImage={post.node.image.file.url}
+            imgDescription={post.node.image.description}
             date={post.node.publishedDate}
           />
         ))}

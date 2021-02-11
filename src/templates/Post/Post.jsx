@@ -6,17 +6,17 @@ import styles from "./Post.module.scss"
 
 export const query = graphql`
   query($slug: String!) {
-    contentfulBlog(slug: { eq: $slug }) {
+    contentfulArticle(slug: { eq: $slug }) {
       title
       author
       publishedDate(formatString: "D MMMM YYYY")
-      heroImage {
+      image {
         file {
           url
         }
       }
       body {
-        raw
+        body
       }
     }
   }
@@ -27,23 +27,21 @@ const Post = props => {
     <Layout>
       <div className={styles.mainContainer}>
         <div className={styles.container}>
-          <h1>{props.data.contentfulBlog.title}</h1>
+          <h1>{props.data.contentfulArticle.title}</h1>
           <hr className={styles.separator} />
           <div className={styles.details}>
-            <p>By {props.data.contentfulBlog.author}</p>
+            <p>By {props.data.contentfulArticle.author}</p>
             <span>|</span>
-            <p>{props.data.contentfulBlog.publishedDate}</p>
+            <p>{props.data.contentfulArticle.publishedDate}</p>
           </div>
           <img
-            src={props.data.contentfulBlog.heroImage.file.url}
+            src={props.data.contentfulArticle.image.file.url}
             alt="sample"
           />
-          {/* <p className={styles.description}> */}
             <ReactMarkdown
-              source={props.data.contentfulBlog.body.raw}
+              source={props.data.contentfulArticle.body.body}
               allowDangerousHtml={true}
             />
-            <p>{JSON.stringify(props.data.contentfulBlog.body.raw)}</p>
           {/* </p> */}
           <button>Read More</button>
         </div>
