@@ -47,7 +47,7 @@ const Blogs = () => {
           {data.allContentfulArticle.edges.map(post => (
             <div className={styles.blog}>
               <img src={post.node.image.file.url} alt={post.node.image.description} />
-              <Link to={`/my_portfolio/blog/${post.node.slug}`}>
+              <Link to={`/blog/${post.node.slug}`}>
                 <h3>{post.node.title}</h3>
               </Link>
               <small>{post.node.publishedDate}</small>
@@ -56,7 +56,7 @@ const Blogs = () => {
             </div>
           ))}
         </div>
-        <Link to="/my_portfolio/blog">
+        <Link to="/blog">
           <button className={styles.viewAll}>View all blogs</button>
         </Link>
       </div>

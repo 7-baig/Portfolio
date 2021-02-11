@@ -29,7 +29,7 @@ const Header = ({ isOpen, setIsOpen, primary, secondary }) => {
               <Link to={primary ? "#projects" : "/#projects"}>Projects</Link>
             </li>
             <li>
-              <Link to="/my_portfolio/blog">Blog</Link>
+              <Link to="/blog">Blog</Link>
             </li>
             <li>
               <Link to={primary ? "#contact" : "/#contact"}>Contact Me</Link>
