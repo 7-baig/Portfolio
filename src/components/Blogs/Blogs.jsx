@@ -56,7 +56,7 @@ const Blogs = () => {
             </div>
           ))}
         </div>
-        <Link to="/blog">
+        <Link to="/my_portfolio/blog">
           <button className={styles.viewAll}>View all blogs</button>
         </Link>
       </div>
