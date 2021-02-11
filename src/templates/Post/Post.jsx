@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, Link, StaticQuery, useStaticQuery } from "gatsby"
 import Layout from "../../components/Layout/Layout"
-import ReactMarkdown from "react-markdown";
+import ReactMarkdown from "react-markdown"
 import styles from "./Post.module.scss"
 
 export const query = graphql`
@@ -34,16 +34,13 @@ const Post = props => {
             <span>|</span>
             <p>{props.data.contentfulArticle.publishedDate}</p>
           </div>
-          <img
-            src={props.data.contentfulArticle.image.file.url}
-            alt="sample"
-          />
+          <img src={props.data.contentfulArticle.image.file.url} alt="sample" />
+          <div className={styles.body}>
             <ReactMarkdown
               source={props.data.contentfulArticle.body.body}
               allowDangerousHtml={true}
             />
-          {/* </p> */}
-          <button>Read More</button>
+          </div>
         </div>
       </div>
     </Layout>
