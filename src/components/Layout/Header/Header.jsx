@@ -8,7 +8,7 @@ const Header = ({ isOpen, setIsOpen, primary, secondary }) => {
     <Headroom>
       <header className={styles.container}>
         <div className={styles.leftContainer}>
-          <Link to={primary ? "/Portfolio" : "/Portfolio"}>
+          <Link to={primary ? "/" : "/"}>
             <div className={styles.nameContainer}>
               <span className={styles.circle}>S</span>
               <p>
@@ -20,19 +20,19 @@ const Header = ({ isOpen, setIsOpen, primary, secondary }) => {
         <div className={styles.rightContainer}>
           <ul>
             <li>
-              <Link to={primary ? "#skills" : "/Portfolio/#skills"}>Skills</Link>
+              <Link to={primary ? "#skills" : "/#skills"}>Skills</Link>
             </li>
             <li>
-              <Link to={primary ? "#experience" : "/Portfolio/#experience"}>Experiences</Link>
+              <Link to={primary ? "#experience" : "/#experience"}>Experiences</Link>
             </li>
             <li>
-              <Link to={primary ? "#projects" : "/Portfolio/#projects"}>Projects</Link>
+              <Link to={primary ? "#projects" : "/#projects"}>Projects</Link>
             </li>
             <li>
-              <Link to="/Portfolio/blog">Blog</Link>
+              <Link to="/blog">Blog</Link>
             </li>
             <li>
-              <Link to={primary ? "#contact" : "/Portfolio/#contact"}>Contact Me</Link>
+              <Link to={primary ? "#contact" : "/#contact"}>Contact Me</Link>
             </li>
           </ul>
           <i class="fas fa-bars" onClick={() => setIsOpen(!isOpen)}></i>
