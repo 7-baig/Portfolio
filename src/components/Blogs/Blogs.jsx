@@ -46,15 +46,15 @@ const Blogs = () => {
         />
         <div className={styles.blogsContainer}>
           {data.allContentfulArticle.edges.map(post => (
-            <Link to={`/blog/${post.node.slug}`}>
-              <div className={styles.blog}>
-                <img src={sample} alt="sample-image" />
+            <div className={styles.blog}>
+              <img src={post.node.image.file.url} alt={post.node.image.description} />
+              <Link to={`/blog/${post.node.slug}`}>
                 <h3>{post.node.title}</h3>
-                <small>{post.node.publishedDate}</small>
-                <hr />
-                <p>{post.node.description}</p>
-              </div>
-            </Link>
+              </Link>
+              <small>{post.node.publishedDate}</small>
+              <hr />
+              <p>{post.node.description}</p>
+            </div>
           ))}
         </div>
         <Link to="/blog">

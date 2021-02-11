@@ -4,7 +4,7 @@ import styles from "./Footer.module.scss"
 const Footer = () => {
   return (
     <footer className={styles.container}>
-      <p>Made with <i className="fas fa-heart"></i> by Saad Baig</p>
+      <p> &copy; 2021, Saad Baig <i className="fas fa-heart"></i> </p>
     </footer>
   )
 }

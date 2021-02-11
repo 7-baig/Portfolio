@@ -21,6 +21,7 @@ const Email = () => {
                   name="name"
                   required
                   onChange={e => setName(e.target.value)}
+                  autoComplete="off"
                 ></input>
               </div>
               <div className={styles.field}>
@@ -31,6 +32,7 @@ const Email = () => {
                   name="email"
                   required
                   onChange={e => setEmail(e.target.value)}
+                  autoComplete="off"
                 ></input>
               </div>
             </div>

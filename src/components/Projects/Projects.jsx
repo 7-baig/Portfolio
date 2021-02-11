@@ -6,6 +6,7 @@ import cart from "../../images/projects/cart.jpg"
 import limo from "../../images/projects/limo.jpg"
 import football from "../../images/projects/football.jpg"
 import restaurant from "../../images/projects/restaurant.jpg"
+import kpibar from "../../images/projects/kpibar.png"
 import Quote from "../Quote/Quote"
 import Fade from "react-reveal/Fade"
 import styles from "./Projects.module.scss"
@@ -46,7 +47,7 @@ const Projects = () => {
           </div>
           <div className={styles.project}>
             <img src={cart} alt="cart" />
-            <h3 className={styles.show}>On-Cart Admin</h3>
+            <h3 className={styles.show}>On-Cart CMS</h3>
             <p>React/Redux - Bootstrap</p>
             <button>
               <a href="https://oncartadmin.web.app/" target="_blank">
@@ -56,8 +57,8 @@ const Projects = () => {
           </div>
           <div className={styles.project}>
             <img src={limo} alt="limo" />
-            <h3 className={styles.show}>Admirals Admin</h3>
-            <p>React-Redux / Bootstrap / Node</p>
+            <h3 className={styles.show}>Admirals CMS</h3>
+            <p>React-Redux - Bootstrap - Node</p>
             <button>
               <a href="https://quiz-app-bc10d.web.app/" target="_blank">
                 View site
@@ -82,7 +83,7 @@ const Projects = () => {
           <div className={styles.project}>
             <img src={football} alt="football" />
             <h3 className={styles.show}>Covid-19 tracker App</h3>
-            <p>React / Charts JS / Material UI</p>
+            <p>React - Charts JS - Material UI</p>
             <button>
               <a
                 href="http://covid-19-tracker-app-saad-baig.surge.sh/"
@@ -101,23 +102,15 @@ const Projects = () => {
             </button>
           </div>
           <div className={styles.project}>
-            <img src={restaurant} alt="restaurant" />
-            <h3 className={styles.show}>Restaurant Website</h3>
-            <p>HTML5 - CSS3 - Javascript</p>
+            <img src={kpibar} alt="kpibar" />
+            <h3 className={styles.show}>KPIBAR's Website</h3>
+            <p>React - Gatsby - CSS3 - Firebase</p>
             <button>
               <a
-                href="https://7-baig.github.io/Restaurant-Website/"
+                href="https://kpibar.com/"
                 target="_blank"
               >
                 View site
-              </a>
-            </button>
-            <button>
-              <a
-                href="https://github.com/7-baig/Restaurant-Website"
-                target="_blank"
-              >
-                Github Repo
               </a>
             </button>
           </div>
