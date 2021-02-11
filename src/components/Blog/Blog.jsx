@@ -1,5 +1,4 @@
 import React from "react"
-import sample from "../../images/projects/restaurant.jpg"
 import { Link } from "gatsby"
 import styles from "./Blog.module.scss"
 

@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link, StaticQuery, useStaticQuery } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../../components/Layout/Layout"
 import ReactMarkdown from "react-markdown"
 import styles from "./Post.module.scss"

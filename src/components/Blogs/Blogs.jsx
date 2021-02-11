@@ -1,5 +1,4 @@
 import React from "react"
-import sample from "../../images/blogs/blog.jpg"
 import Quote from "../Quote/Quote"
 import write from "../../images/icons/write.png"
 import Fade from "react-reveal/Fade"
