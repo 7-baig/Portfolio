@@ -16,28 +16,36 @@ const Contact = () => {
           <p>Have a question? or want to work together?</p>
           <div className={styles.socialContainer}>
             <Fade left>
-              <div className={styles.social}>
-                <img src={facebook} alt="facebook-icon" />
-                <p className={styles.fb}>Like me on Facebook</p>
-              </div>
+              <a href="#" >
+                <div className={styles.social}>
+                  <img src={facebook} alt="facebook-icon" />
+                  <p className={styles.fb}>Like me on Facebook</p>
+                </div>
+              </a>
             </Fade>
             <Fade left>
-              <div className={styles.social}>
-                <img src={twitter} alt="twitter-icon" />
-                <p className={styles.twitter}>Follow me on Twitter</p>
-              </div>
+              <a href="https://twitter.com/SaadBai43513327" target="_blank">
+                <div className={styles.social}>
+                  <img src={twitter} alt="twitter-icon" />
+                  <p className={styles.twitter}>Follow me on Twitter</p>
+                </div>
+              </a>
             </Fade>
             <Fade left>
-              <div className={styles.social}>
-                <img src={github} alt="github-icon" />
-                <p className={styles.git}>Follow me on Github</p>
-              </div>
+              <a href="https://github.com/7-baig" target="_blank">
+                <div className={styles.social}>
+                  <img src={github} alt="github-icon" />
+                  <p className={styles.git}>Follow me on Github</p>
+                </div>
+              </a>
             </Fade>
             <Fade left>
-              <div className={styles.social}>
-                <img src={linkedin} alt="linkedin-icon" />
-                <p className={styles.linkedin}>Connect on Linkedin</p>
-              </div>
+              <a href="https://www.linkedin.com/in/saad-baig-b6861a196/" target="_blank">
+                <div className={styles.social}>
+                  <img src={linkedin} alt="linkedin-icon" />
+                  <p className={styles.linkedin}>Connect on Linkedin</p>
+                </div>
+              </a>
             </Fade>
           </div>
         </div>
