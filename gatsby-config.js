@@ -14,7 +14,5 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
   ],
-}
-module.exports = {
   pathPrefix: "/my_portfolio",
 }
