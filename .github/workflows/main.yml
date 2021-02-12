@@ -15,3 +15,8 @@ jobs:
           access-token: ${{ secrets.demo }}
           deploy-branch: gh-pages
           gatsby-args: --prefix-paths
+      - name: Use environment variables
+        env:
+          CI: true
+          SPACE_ID: ${{ secrets.SPACE_ID }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} 
