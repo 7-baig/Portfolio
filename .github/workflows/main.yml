@@ -11,7 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: enriikke/gatsby-gh-pages-action@v2
+        env:
+          CI: true
+          SPACE_ID: ${{ secrets.SPACE_ID }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}  
         with:
           access-token: ${{ secrets.demo }}
           deploy-branch: gh-pages
-          gatsby-args: --prefix-paths
+          gatsby-args: --prefix-paths 
