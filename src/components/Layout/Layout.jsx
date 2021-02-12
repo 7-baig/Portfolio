@@ -8,7 +8,7 @@ const Layout = ({ children, primary, secondary }) => {
   return (
     <>
       <Header isOpen={isOpen} setIsOpen={setIsOpen} primary={primary} secondary={secondary} />
-      <SideNav isOpen={isOpen} setIsOpen={setIsOpen} />
+      <SideNav isOpen={isOpen} setIsOpen={setIsOpen} primary={primary} secondary={secondary} />
       {children}
       <Footer />
     </>

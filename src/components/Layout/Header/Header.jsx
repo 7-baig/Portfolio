@@ -1,5 +1,6 @@
 import React from "react"
 import Headroom from "react-headroom"
+import menu from '../../../images/icons/menu.png'
 import { Link } from "gatsby"
 import styles from "./Header.module.scss"
 
@@ -35,7 +36,7 @@ const Header = ({ isOpen, setIsOpen, primary, secondary }) => {
               <Link to={primary ? "#contact" : "/#contact"}>Contact Me</Link>
             </li>
           </ul>
-          <i class="fas fa-bars" onClick={() => setIsOpen(!isOpen)}></i>
+          <img className={styles.menuIcon} src={menu} alt="menu-icon" onClick={() => setIsOpen(!isOpen)} />
         </div>
       </header>
     </Headroom>

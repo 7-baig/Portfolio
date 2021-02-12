@@ -51,7 +51,7 @@
         margin-left: 45px;
       }
     }
-    i {
+    .menuIcon {
       display: none;
     }
   }
@@ -84,8 +84,9 @@
       ul {
         display: none;
       }
-      i {
+      .menuIcon {
         display: block;
+        width: 20px;
       }
     }
   }
