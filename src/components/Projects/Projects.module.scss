@@ -69,7 +69,7 @@
         }
       }
       button:nth-child(4) {
-        bottom: 80px;
+        bottom: 115px;
         color: var(--primary-color);
         border: 2px solid var(--secondary-color);
         &:hover {
@@ -78,7 +78,16 @@
         }
       }
       button:nth-child(5) {
-        bottom: 30px;
+        bottom: 65px;
+        color: var(--primary-color);
+        border: 2px solid var(--primary-color);
+        &:hover {
+          color: #ffffff;
+          background-color: var(--primary-color);
+        }
+      }
+      button:nth-child(6) {
+        bottom: 15px;
         color: var(--primary-color);
         border: 2px solid var(--primary-color);
         &:hover {
@@ -105,6 +114,10 @@
         opacity: 1;
         animation: move-up_2 1200ms normal;
       }
+      &:hover button:nth-child(6) {
+        opacity: 1;
+        animation: move-up_3 1200ms normal;
+      }
       @keyframes move-down_1 {
         0% {
           top: 0px;
@@ -126,7 +139,7 @@
           bottom: 0px;
         }
         100% {
-          bottom: 80px;
+          bottom: 115px;
         }
       }
       @keyframes move-up_2 {
@@ -134,7 +147,15 @@
           bottom: 0px;
         }
         100% {
-          bottom: 30px;
+          bottom: 65px;
+        }
+      }
+      @keyframes move-up_3 {
+        0% {
+          bottom: 0px;
+        }
+        100% {
+          bottom: 15px;
         }
       }
     }

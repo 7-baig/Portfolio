@@ -5,15 +5,16 @@ import rocket from "../../images/projects/rocket.png"
 import cart from "../../images/projects/cart.jpg"
 import limo from "../../images/projects/limo.jpg"
 import football from "../../images/projects/football.jpg"
-import restaurant from "../../images/projects/restaurant.jpg"
 import kpibar from "../../images/projects/kpibar.png"
 import Quote from "../Quote/Quote"
 import Fade from "react-reveal/Fade"
 import styles from "./Projects.module.scss"
+import Modal from "./Modal/Modal"
 
 const Projects = () => {
   return (
     <Fade bottom>
+      <Modal />
       <div className={styles.container} id="projects">
         <div className={styles.header}>
           <h1>Projects</h1>
@@ -28,14 +29,14 @@ const Projects = () => {
             <img src={sample} alt="sample" />
             <h3 className={styles.show}>E-Commerce Application</h3>
             <p>React/Redux - Node - MongoDB - Express</p>
-            <button>
+            {/* <button>
               <a
                 href="https://github.com/7-baig/MERN_E-COMMERCE_APP"
                 target="_blank"
               >
                 View site
               </a>
-            </button>
+            </button> */}
             <button>
               <a
                 href="https://github.com/7-baig/MERN_E-COMMERCE_APP"
@@ -44,6 +45,7 @@ const Projects = () => {
                 Github Repo
               </a>
             </button>
+            <button>Watch Video</button>
           </div>
           <div className={styles.project}>
             <img src={cart} alt="cart" />
@@ -54,16 +56,18 @@ const Projects = () => {
                 View site
               </a>
             </button>
+            <button>Watch Video</button>
           </div>
           <div className={styles.project}>
             <img src={limo} alt="limo" />
             <h3 className={styles.show}>Admirals CMS</h3>
             <p>React-Redux - Bootstrap - Node</p>
-            <button>
+            {/* <button>
               <a href="https://quiz-app-bc10d.web.app/" target="_blank">
                 View site
               </a>
-            </button>
+            </button> */}
+            <button>Watch Video</button>
           </div>
           <div className={styles.project}>
             <img src={quiz} alt="quiz" />
@@ -79,6 +83,7 @@ const Projects = () => {
                 Github Repo
               </a>
             </button>
+            <button>Watch Video</button>
           </div>
           <div className={styles.project}>
             <img src={football} alt="football" />
@@ -100,19 +105,18 @@ const Projects = () => {
                 Github Repo
               </a>
             </button>
+            <button>Watch Video</button>
           </div>
           <div className={styles.project}>
             <img src={kpibar} alt="kpibar" />
             <h3 className={styles.show}>KPIBAR's Website</h3>
             <p>React - Gatsby - CSS3 - Firebase</p>
             <button>
-              <a
-                href="https://kpibar.com/"
-                target="_blank"
-              >
+              <a href="https://kpibar.com/" target="_blank">
                 View site
               </a>
             </button>
+            <button>Watch Video</button>
           </div>
         </div>
         <a href="https://github.com/7-baig?tab=repositories" target="_blank">
