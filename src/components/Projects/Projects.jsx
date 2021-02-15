@@ -18,7 +18,7 @@ const Projects = () => {
       <div className={styles.container} id="projects">
         <div className={styles.header}>
           <h1>Projects</h1>
-          <img src={rocket} alt="rocket" />
+          <img src={rocket} alt="rocket" loading="lazy"/>
         </div>
         <Quote
           quote="You can do anything you set your mind to."
@@ -26,7 +26,7 @@ const Projects = () => {
         />
         <div className={styles.projectsContainer}>
           <div className={styles.project}>
-            <img src={sample} alt="sample" />
+            <img src={sample} alt="sample" loading="lazy"/>
             <h3 className={styles.show}>E-Commerce Application</h3>
             <p>React/Redux - Node - MongoDB - Express</p>
             {/* <button>
@@ -48,7 +48,7 @@ const Projects = () => {
             <button>Watch Video</button>
           </div>
           <div className={styles.project}>
-            <img src={cart} alt="cart" />
+            <img src={cart} alt="cart" loading="lazy"/>
             <h3 className={styles.show}>On-Cart CMS</h3>
             <p>React/Redux - Bootstrap</p>
             <button>
@@ -59,7 +59,7 @@ const Projects = () => {
             <button>Watch Video</button>
           </div>
           <div className={styles.project}>
-            <img src={limo} alt="limo" />
+            <img src={limo} alt="limo" loading="lazy"/>
             <h3 className={styles.show}>Admirals CMS</h3>
             <p>React-Redux - Bootstrap - Node</p>
             {/* <button>
@@ -70,7 +70,7 @@ const Projects = () => {
             <button>Watch Video</button>
           </div>
           <div className={styles.project}>
-            <img src={quiz} alt="quiz" />
+            <img src={quiz} alt="quiz" loading="lazy"/>
             <h3 className={styles.show}>Quiz App (PWA)</h3>
             <p>React JS - TypeScript - PWA</p>
             <button>
@@ -86,7 +86,7 @@ const Projects = () => {
             <button>Watch Video</button>
           </div>
           <div className={styles.project}>
-            <img src={football} alt="football" />
+            <img src={football} alt="football" loading="lazy"/>
             <h3 className={styles.show}>Covid-19 tracker App</h3>
             <p>React - Charts JS - Material UI</p>
             <button>
@@ -108,7 +108,7 @@ const Projects = () => {
             <button>Watch Video</button>
           </div>
           <div className={styles.project}>
-            <img src={kpibar} alt="kpibar" />
+            <img src={kpibar} alt="kpibar" loading="lazy"/>
             <h3 className={styles.show}>KPIBAR's Website</h3>
             <p>React - Gatsby - CSS3 - Firebase</p>
             <button>

@@ -46,7 +46,7 @@ const Blogs = () => {
         <div className={styles.blogsContainer}>
           {data.allContentfulArticle.edges.map(post => (
             <div className={styles.blog}>
-              <img src={post.node.image.file.url} alt={post.node.image.description} />
+              <img src={post.node.image.file.url} alt={post.node.image.description} loading="lazy"/>
               <Link to={`/blog/${post.node.slug}`}>
                 <h3>{post.node.title}</h3>
               </Link>

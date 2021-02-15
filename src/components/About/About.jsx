@@ -10,7 +10,7 @@ const About = () => {
     <div className={styles.container} id="about">
       <div className={styles.leftContainer}>
         <Fade left>
-          <img src={vector} alt="developer" />
+          <img src={vector} alt="developer" loading="lazy"/>
         </Fade>
       </div>
       <Fade right>
