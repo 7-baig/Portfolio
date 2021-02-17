@@ -11,7 +11,7 @@ import Fade from "react-reveal/Fade"
 import styles from "./Projects.module.scss"
 import Modal from "./Modal/Modal"
 
-const Projects = () => {
+const Projects = ({ isOpenModal, setIsOpenModal }) => {
   return (
     <Fade bottom>
       <Modal />
@@ -45,7 +45,7 @@ const Projects = () => {
                 Github Repo
               </a>
             </button>
-            <button>Watch Video</button>
+            <button onClick={e => setIsOpenModal(!isOpenModal)}>Watch Video</button>
           </div>
           <div className={styles.project}>
             <img src={cart} alt="cart" loading="lazy"/>
