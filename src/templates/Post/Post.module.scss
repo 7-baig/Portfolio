@@ -39,6 +39,10 @@
     }
   }
 }
+.comments {
+  margin-top: 30px;
+  padding: 0px 40px;
+}
 @media screen and (max-width: 767px) {
   .mainContainer {
     margin-top: 40px;
@@ -60,5 +64,8 @@
         line-height: 32px;
       }
     }
+  }
+  .comments {
+    padding: 0px 20px;
   }
 }

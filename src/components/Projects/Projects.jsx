@@ -1,23 +1,33 @@
-import React from "react"
+import React, { useState } from "react"
 import sample from "../../images/projects/project.png"
 import quiz from "../../images/projects/quiz.jpg"
 import rocket from "../../images/projects/rocket.png"
 import cart from "../../images/projects/cart.jpg"
 import limo from "../../images/projects/limo.jpg"
 import football from "../../images/projects/football.jpg"
-import restaurant from "../../images/projects/restaurant.jpg"
 import kpibar from "../../images/projects/kpibar.png"
 import Quote from "../Quote/Quote"
 import Fade from "react-reveal/Fade"
+import vid from "../../assets/video.mp4"
+import vid_2 from "../../assets/video_2.mp4"
+import Modal from "./Modal/Modal"
 import styles from "./Projects.module.scss"
 
-const Projects = () => {
+const Projects = ({ isOpenModal, setIsOpenModal }) => {
+
+  const [v, setV] = useState(2)
+
+  const handleClick = e => {
+    setV(1)
+    setIsOpenModal(!isOpenModal)
+  }
+
   return (
     <Fade bottom>
       <div className={styles.container} id="projects">
         <div className={styles.header}>
           <h1>Projects</h1>
-          <img src={rocket} alt="rocket" />
+          <img src={rocket} alt="rocket" loading="lazy" />
         </div>
         <Quote
           quote="You can do anything you set your mind to."
@@ -25,17 +35,17 @@ const Projects = () => {
         />
         <div className={styles.projectsContainer}>
           <div className={styles.project}>
-            <img src={sample} alt="sample" />
+            <img src={sample} alt="sample" loading="lazy" />
             <h3 className={styles.show}>E-Commerce Application</h3>
             <p>React/Redux - Node - MongoDB - Express</p>
-            <button>
+            {/* <button>
               <a
-                href="https://github.com/7-baig/MERN_E-COMMERCE_APP"
-                target="_blank"
+              href="https://github.com/7-baig/MERN_E-COMMERCE_APP"
+              target="_blank"
               >
-                View site
+              View site
               </a>
-            </button>
+            </button> */}
             <button>
               <a
                 href="https://github.com/7-baig/MERN_E-COMMERCE_APP"
@@ -44,9 +54,10 @@ const Projects = () => {
                 Github Repo
               </a>
             </button>
+            <button onClick={handleClick}>Watch Video</button>
           </div>
           <div className={styles.project}>
-            <img src={cart} alt="cart" />
+            <img src={cart} alt="cart" loading="lazy" />
             <h3 className={styles.show}>On-Cart CMS</h3>
             <p>React/Redux - Bootstrap</p>
             <button>
@@ -54,19 +65,21 @@ const Projects = () => {
                 View site
               </a>
             </button>
+            <button onClick={handleClick}>Watch Video</button>
           </div>
           <div className={styles.project}>
-            <img src={limo} alt="limo" />
+            <img src={limo} alt="limo" loading="lazy" />
             <h3 className={styles.show}>Admirals CMS</h3>
             <p>React-Redux - Bootstrap - Node</p>
-            <button>
+            {/* <button>
               <a href="https://quiz-app-bc10d.web.app/" target="_blank">
-                View site
+              View site
               </a>
-            </button>
+            </button> */}
+            <button>Watch Video</button>
           </div>
           <div className={styles.project}>
-            <img src={quiz} alt="quiz" />
+            <img src={quiz} alt="quiz" loading="lazy" />
             <h3 className={styles.show}>Quiz App (PWA)</h3>
             <p>React JS - TypeScript - PWA</p>
             <button>
@@ -79,9 +92,10 @@ const Projects = () => {
                 Github Repo
               </a>
             </button>
+            <button>Watch Video</button>
           </div>
           <div className={styles.project}>
-            <img src={football} alt="football" />
+            <img src={football} alt="football" loading="lazy" />
             <h3 className={styles.show}>Covid-19 tracker App</h3>
             <p>React - Charts JS - Material UI</p>
             <button>
@@ -100,25 +114,25 @@ const Projects = () => {
                 Github Repo
               </a>
             </button>
+            <button>Watch Video</button>
           </div>
           <div className={styles.project}>
-            <img src={kpibar} alt="kpibar" />
+            <img src={kpibar} alt="kpibar" loading="lazy" />
             <h3 className={styles.show}>KPIBAR's Website</h3>
             <p>React - Gatsby - CSS3 - Firebase</p>
             <button>
-              <a
-                href="https://kpibar.com/"
-                target="_blank"
-              >
+              <a href="https://kpibar.com/" target="_blank">
                 View site
               </a>
             </button>
+            <button>Watch Video</button>
           </div>
         </div>
         <a href="https://github.com/7-baig?tab=repositories" target="_blank">
           <button className={styles.viewAll}>View all projects</button>
         </a>
       </div>
+      <Modal v={v} />
     </Fade>
   )
 }

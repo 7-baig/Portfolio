@@ -14,7 +14,7 @@ const Blog = ({ slug, title, description, heroImage, imgDescription, date, autho
         <span>|</span>
         <p>{date}</p>
       </div>
-      <img src={heroImage} alt={imgDescription} />
+      <img src={heroImage} alt={imgDescription} loading="lazy"/>
       <p className={styles.description}>{description}</p>
       <Link to={`/blog/${slug}`}>
         <button>Read More</button>

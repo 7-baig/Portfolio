@@ -20,6 +20,7 @@ const Facts = () => {
             src={pizzaEatingMan}
             alt="pizza-eating-man"
             className={styles.pizza}
+            loading="lazy"
           />
         </Fade>
         <img src={eye} alt="eye" className={styles.eye} />

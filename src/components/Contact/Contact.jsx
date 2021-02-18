@@ -26,7 +26,7 @@ const Contact = () => {
             <Fade left>
               <a href="https://twitter.com/SaadBai43513327" target="_blank">
                 <div className={styles.social}>
-                  <img src={twitter} alt="twitter-icon" />
+                  <img src={twitter} alt="twitter-icon" loading="lazy"/>
                   <p className={styles.twitter}>Follow me on Twitter</p>
                 </div>
               </a>
