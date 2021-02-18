@@ -8,11 +8,13 @@ import Experiences from "../components/Experiences/Experiences"
 import Facts from "../components/Facts/Facts"
 import Layout from "../components/Layout/Layout"
 import Projects from "../components/Projects/Projects"
+import SEO from "../components/seo/seo"
 
 export default function Home() {
   const [isOpenModal, setIsOpenModal] = useState(false)
   return (
     <Layout primary={true} isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal}>
+      <SEO />
       <About />
       <Abilities />
       <Experiences />
