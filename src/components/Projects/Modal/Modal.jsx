@@ -1,9 +1,11 @@
+import { clearConfigCache } from "prettier"
 import React from "react"
-import video from "../../../assets/video.mp4"
+import videooo from "../../../assets/video.mp4"
+import videooo2 from "../../../assets/video_2.mp4"
 import styles from "./Modal.module.scss"
 
-const Modal = ({ isOpenModal, setIsOpenModal }) => {
-
+const Modal = ({ isOpenModal, setIsOpenModal, v="" }) => {
+console.log(v);
   return (
     <div className={styles.container}>
       <div
@@ -15,8 +17,8 @@ const Modal = ({ isOpenModal, setIsOpenModal }) => {
         }
       >
         <div className={styles.popup}>
-          <video loop autoPlay>
-            <source src={video} type="video/mp4" />
+          <video loop autoPlay muted>
+            <source src={v === "1" ? videooo : videooo2} type="video/mp4" />
           </video>
           <i className={styles.times + " fas fa-times"} onClick={() => setIsOpenModal(!isOpenModal)}></i>
         </div>

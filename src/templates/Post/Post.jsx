@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../../components/Layout/Layout"
 import ReactMarkdown from "react-markdown"
+import { DiscussionEmbed } from "disqus-react"
 import styles from "./Post.module.scss"
 
 export const query = graphql`
@@ -23,6 +24,10 @@ export const query = graphql`
 `
 
 const Post = props => {
+  const disqusConfig = {
+    shortname: process.env.GATSBY_DISQUS_NAME,
+    config: { identifier: props.data.contentfulArticle.title, title: props.data.contentfulArticle.title },
+  }
   return (
     <Layout>
       <div className={styles.mainContainer}>
@@ -42,6 +47,9 @@ const Post = props => {
             />
           </div>
         </div>
+      </div>
+      <div className={styles.comments}>
+        <DiscussionEmbed {...disqusConfig} />
       </div>
     </Layout>
   )
