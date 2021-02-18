@@ -24,7 +24,7 @@ const Contact = () => {
               </a>
             </Fade>
             <Fade left>
-              <a href="https://twitter.com/SaadBai43513327" target="_blank">
+              <a href="https://twitter.com/saadbaigg" target="_blank">
                 <div className={styles.social}>
                   <img src={twitter} alt="twitter-icon" loading="lazy"/>
                   <p className={styles.twitter}>Follow me on Twitter</p>
@@ -32,7 +32,7 @@ const Contact = () => {
               </a>
             </Fade>
             <Fade left>
-              <a href="https://github.com/7-baig" target="_blank">
+              <a href="https://github.com/saadbaigg" target="_blank">
                 <div className={styles.social}>
                   <img src={github} alt="github-icon" />
                   <p className={styles.git}>Follow me on Github</p>
