@@ -3,6 +3,13 @@ require("dotenv").config({
 })
 
 module.exports = {
+  siteMetadata: {
+    title: "Saad Baig.",
+    titleTemplate: "Saad Baig.",
+    description: "Saad Baig.",
+    url: "https://saadbaigg.github.io/portfolio",
+    twitterUsername: "@saadbaigg",
+  },
   plugins: [
     `gatsby-plugin-sass`,
     {
