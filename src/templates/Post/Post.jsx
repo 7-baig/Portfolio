@@ -9,6 +9,7 @@ import SEO from "../../components/seo/seo"
 export const query = graphql`
   query($slug: String!) {
     contentfulArticle(slug: { eq: $slug }) {
+      slug
       title
       author
       publishedDate(formatString: "D MMMM YYYY")
@@ -44,7 +45,7 @@ const Post = props => {
             </div>
             <div className={styles.socials}>
               <div className={styles.twitterBtn}>
-                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+                <a href={`https://twitter.com/intent/tweet?text=${props.data.contentfulArticle.title}?url=https://saadbaigg.github.io/portfolio/blog/${props.data.contentfulArticle.slug}`} class="twitter-share-button" data-show-count="false">Tweet</a>
               </div>
               <div className={styles.fbBtn}>
                 <div class="fb-like" data-href="https://saadbaigg.github.io/portfolio/" data-width="" data-layout="button" data-action="like" data-size="small" data-share="true"></div>
