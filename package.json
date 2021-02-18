@@ -15,7 +15,6 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "^14.1.2",
     "contentful": "^8.1.7",
     "disqus-react": "^1.0.11",
     "gatsby": "^2.26.1",
