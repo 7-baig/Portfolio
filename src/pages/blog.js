@@ -3,6 +3,7 @@ import BlogPost from "../components/Blog/Blog"
 import Layout from "../components/Layout/Layout"
 import { useStaticQuery, graphql } from "gatsby"
 import styles from "../styles/blog.module.scss"
+import SEO from "../components/seo/seo"
 
 const Blog = () => {
   const data = useStaticQuery(
@@ -33,6 +34,7 @@ const Blog = () => {
   )
   return (
     <Layout secondary={true}>
+      <SEO />
       <div className={styles.container}>
         {data.allContentfulArticle.edges.map(post => (
           <BlogPost
