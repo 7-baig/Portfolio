@@ -26,7 +26,15 @@
           margin: 0px 15px;
         }
       }
-      .socials {}
+      .socials {
+        display: flex;
+        align-items: center;
+        margin-bottom: -5px;
+        .twitterBtn {
+          margin-right: 4px;
+          margin-top: -5px;
+        }
+      }
     }
     img {
       width: 100%;

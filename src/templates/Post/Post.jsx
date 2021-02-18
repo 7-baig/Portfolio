@@ -43,7 +43,12 @@ const Post = props => {
               <p>{props.data.contentfulArticle.publishedDate}</p>
             </div>
             <div className={styles.socials}>
-              <div class="fb-like" data-href="https://saadbaigg.github.io/portfolio/" data-width="" data-layout="button" data-action="like" data-size="small" data-share="true"></div>
+              <div className={styles.twitterBtn}>
+                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+              </div>
+              <div className={styles.fbBtn}>
+                <div class="fb-like" data-href="https://saadbaigg.github.io/portfolio/" data-width="" data-layout="button" data-action="like" data-size="small" data-share="true"></div>
+              </div>
             </div>
           </div>
           <img src={props.data.contentfulArticle.image.file.url} alt="sample" />

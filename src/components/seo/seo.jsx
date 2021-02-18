@@ -55,6 +55,8 @@ const SEO = ({ title, description, article }) => {
 
             <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v9.0" nonce="0TOUz86t"></script>
 
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
         </Helmet>
     );
 };
