@@ -1,8 +1,9 @@
 import React from "react"
-import vector from "../../images/about.svg"
-import astronaut from "../../images/facts/astronaut.png"
 import { Link } from "gatsby"
 import Fade from "react-reveal/Fade"
+import vector from "../../images/about.svg"
+import astronaut from "../../images/facts/astronaut.png"
+import me from "../../images/contact/me.jpg"
 import styles from "./About.module.scss"
 
 const About = () => {
