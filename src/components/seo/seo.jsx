@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useLocation } from "@reach/router";
 import { useStaticQuery, graphql } from "gatsby";
-import ogImage from "../../images/contactme.jpg"
+import ogImage from "../../images/contact/me.jpg"
 
 const SEO = ({ title, description, article }) => {
     const { pathname } = useLocation();
