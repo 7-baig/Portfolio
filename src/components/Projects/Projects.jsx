@@ -12,7 +12,6 @@ import styles from "./Projects.module.scss"
 
 const Projects = ({ isOpenModal, setIsOpenModal, v, setV }) => {
 
-  console.log(v);
   return (
     <Fade bottom>
       <div className={styles.container} id="projects">
