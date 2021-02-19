@@ -12,13 +12,14 @@ import SEO from "../components/seo/seo"
 
 export default function Home() {
   const [isOpenModal, setIsOpenModal] = useState(false)
+  const [v, setV] = useState("")
   return (
-    <Layout primary={true} isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal}>
+    <Layout primary={true} isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal} v={v} setV={setV}>
       <SEO />
       <About />
       <Abilities />
       <Experiences />
-      <Projects isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal} />
+      <Projects isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal} v={v} setV={setV}/>
       <Blogs />
       <Facts />
       <Contact />

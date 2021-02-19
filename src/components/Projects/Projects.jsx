@@ -8,20 +8,11 @@ import football from "../../images/projects/football.jpg"
 import kpibar from "../../images/projects/kpibar.png"
 import Quote from "../Quote/Quote"
 import Fade from "react-reveal/Fade"
-import vid from "../../assets/video.mp4"
-import vid_2 from "../../assets/video_2.mp4"
-import Modal from "./Modal/Modal"
 import styles from "./Projects.module.scss"
 
-const Projects = ({ isOpenModal, setIsOpenModal }) => {
+const Projects = ({ isOpenModal, setIsOpenModal, v, setV }) => {
 
-  const [v, setV] = useState(2)
-
-  const handleClick = e => {
-    setV(1)
-    setIsOpenModal(!isOpenModal)
-  }
-
+  console.log(v);
   return (
     <Fade bottom>
       <div className={styles.container} id="projects">
@@ -35,17 +26,23 @@ const Projects = ({ isOpenModal, setIsOpenModal }) => {
         />
         <div className={styles.projectsContainer}>
           <div className={styles.project}>
+            <img src={kpibar} alt="kpibar" loading="lazy" />
+            <h3 className={styles.show}>KPIBAR's Website</h3>
+            <p>React - Gatsby - CSS3 - Firebase</p>
+            <button>
+              <a href="https://website-pre.kpibar.com/" target="_blank">
+                View site
+              </a>
+            </button>
+            <button onClick={() => {
+              setV("kpibar")
+              setIsOpenModal(!isOpenModal)
+            }}>Watch Video</button>
+          </div>
+          <div className={styles.project}>
             <img src={sample} alt="sample" loading="lazy" />
             <h3 className={styles.show}>E-Commerce Application</h3>
             <p>React/Redux - Node - MongoDB - Express</p>
-            {/* <button>
-              <a
-              href="https://github.com/7-baig/MERN_E-COMMERCE_APP"
-              target="_blank"
-              >
-              View site
-              </a>
-            </button> */}
             <button>
               <a
                 href="https://github.com/7-baig/MERN_E-COMMERCE_APP"
@@ -54,7 +51,9 @@ const Projects = ({ isOpenModal, setIsOpenModal }) => {
                 Github Repo
               </a>
             </button>
-            <button onClick={handleClick}>Watch Video</button>
+            <button onClick={() => {
+              setIsOpenModal(!isOpenModal)
+            }}>Watch Video</button>
           </div>
           <div className={styles.project}>
             <img src={cart} alt="cart" loading="lazy" />
@@ -65,18 +64,19 @@ const Projects = ({ isOpenModal, setIsOpenModal }) => {
                 View site
               </a>
             </button>
-            <button onClick={handleClick}>Watch Video</button>
+            <button onClick={() => {
+              setV("oncart")
+              setIsOpenModal(!isOpenModal)
+            }}>Watch Video</button>
           </div>
           <div className={styles.project}>
             <img src={limo} alt="limo" loading="lazy" />
             <h3 className={styles.show}>Admirals CMS</h3>
             <p>React-Redux - Bootstrap - Node</p>
-            {/* <button>
-              <a href="https://quiz-app-bc10d.web.app/" target="_blank">
-              View site
-              </a>
-            </button> */}
-            <button>Watch Video</button>
+            <button onClick={() => {
+              setV("admiral")
+              setIsOpenModal(!isOpenModal)
+            }}>Watch Video</button>
           </div>
           <div className={styles.project}>
             <img src={quiz} alt="quiz" loading="lazy" />
@@ -92,7 +92,6 @@ const Projects = ({ isOpenModal, setIsOpenModal }) => {
                 Github Repo
               </a>
             </button>
-            <button>Watch Video</button>
           </div>
           <div className={styles.project}>
             <img src={football} alt="football" loading="lazy" />
@@ -108,31 +107,18 @@ const Projects = ({ isOpenModal, setIsOpenModal }) => {
             </button>
             <button>
               <a
-                href="https://github.com/7-baig/Covid-19-Tracker-App"
+                href="https://github.com/saadbaigg/Covid-19-Tracker-App"
                 target="_blank"
               >
                 Github Repo
               </a>
             </button>
-            <button>Watch Video</button>
-          </div>
-          <div className={styles.project}>
-            <img src={kpibar} alt="kpibar" loading="lazy" />
-            <h3 className={styles.show}>KPIBAR's Website</h3>
-            <p>React - Gatsby - CSS3 - Firebase</p>
-            <button>
-              <a href="https://kpibar.com/" target="_blank">
-                View site
-              </a>
-            </button>
-            <button>Watch Video</button>
           </div>
         </div>
-        <a href="https://github.com/7-baig?tab=repositories" target="_blank">
+        <a href="https://github.com/saadbaigg?tab=repositories" target="_blank">
           <button className={styles.viewAll}>View all projects</button>
         </a>
       </div>
-      <Modal v={v} />
     </Fade>
   )
 }
