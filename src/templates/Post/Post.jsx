@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../../components/Layout/Layout"
 import ReactMarkdown from "react-markdown"
-import { DiscussionEmbed } from "disqus-react"
 import styles from "./Post.module.scss"
 import SEO from "../../components/seo/seo"
 
@@ -60,9 +59,6 @@ const Post = props => {
             />
           </div>
         </div>
-      </div>
-      <div className={styles.comments}>
-        <DiscussionEmbed {...disqusConfig} />
       </div>
     </Layout>
   )
