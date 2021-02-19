@@ -27,7 +27,7 @@ const About = () => {
             articles you'll find me reading books, drawing and travelling
           </p>
           <div className={styles.btnContainer}>
-            <a href="../../images/icons/books.png" download>
+            <a href="../../assets/resume.pdf" download>
               <button>Download CV</button>
             </a>
             <Link to="#contact">
