@@ -96,10 +96,16 @@
     .blogsContainer {
       flex-direction: column;
       justify-content: space-between;
-      padding: 0px 20px;
+      padding: 0px 0px;
+      width: calc(100% - 40px);
       .blog {
         width: 100%;
         margin-bottom: 40px;
+        img {
+          height: auto;
+          max-height: 300px;
+          margin-bottom: 10px;
+        }
         h3 {
           font-size: 18px;
         }
