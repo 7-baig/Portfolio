@@ -1,10 +1,10 @@
-import { clearConfigCache } from "prettier"
 import React from "react"
-import videooo from "../../../assets/video.mp4"
-import videooo2 from "../../../assets/video_2.mp4"
+import kpibar from "../../../assets/kpibar.mp4"
+import admiral from "../../../assets/admiral_cms.mp4"
+import oncart from "../../../assets/oncart_cms.mp4"
 import styles from "./Modal.module.scss"
 
-const Modal = ({ isOpenModal, setIsOpenModal, v="" }) => {
+const Modal = ({ isOpenModal, setIsOpenModal, v, setV }) => {
 console.log(v);
   return (
     <div className={styles.container}>
@@ -18,7 +18,7 @@ console.log(v);
       >
         <div className={styles.popup}>
           <video loop autoPlay muted>
-            <source src={v === "1" ? videooo : videooo2} type="video/mp4" />
+            <source src={v === "kpibar" ? kpibar : v === "admiral" ? admiral : oncart} type="video/mp4" />
           </video>
           <i className={styles.times + " fas fa-times"} onClick={() => setIsOpenModal(!isOpenModal)}></i>
         </div>
