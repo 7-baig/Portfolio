@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useLocation } from "@reach/router";
 import { useStaticQuery, graphql } from "gatsby";
+import ogImage from "../../images/contactme.jpg"
 
 const SEO = ({ title, description, article }) => {
     const { pathname } = useLocation();
@@ -50,6 +51,9 @@ const SEO = ({ title, description, article }) => {
             )}
 
             {seo.image && <meta name="twitter:image" content={seo.image} />}
+
+            { <meta property="og:image" content={`https://saadbaigg.github.io/portfolio/${ogImage}`} /> }
+
 
             <script src="https://kit.fontawesome.com/44207887b0.js" crossorigin="anonymous"></script>
 
