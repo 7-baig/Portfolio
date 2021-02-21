@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import sample from "../../images/projects/project.png"
+import React from "react"
+import rdi from "../../images/projects/rdi.png"
 import quiz from "../../images/projects/quiz.jpg"
 import rocket from "../../images/projects/rocket.png"
 import cart from "../../images/projects/cart.jpg"
@@ -10,9 +10,8 @@ import Quote from "../Quote/Quote"
 import Fade from "react-reveal/Fade"
 import styles from "./Projects.module.scss"
 
-const Projects = ({ isOpenModal, setIsOpenModal, v, setV }) => {
+const Projects = () => {
 
-  console.log(v);
   return (
     <Fade bottom>
       <div className={styles.container} id="projects">
@@ -34,12 +33,8 @@ const Projects = ({ isOpenModal, setIsOpenModal, v, setV }) => {
                 View site
               </a>
             </button>
-            <button onClick={() => {
-              setV("kpibar")
-              setIsOpenModal(!isOpenModal)
-            }}>Watch Video</button>
           </div>
-          <div className={styles.project}>
+          {/* <div className={styles.project}>
             <img src={sample} alt="sample" loading="lazy" />
             <h3 className={styles.show}>E-Commerce Application</h3>
             <p>React/Redux - Node - MongoDB - Express</p>
@@ -54,7 +49,18 @@ const Projects = ({ isOpenModal, setIsOpenModal, v, setV }) => {
             <button onClick={() => {
               setIsOpenModal(!isOpenModal)
             }}>Watch Video</button>
+          </div> */}
+          <div className={styles.project}>
+            <img src={rdi} alt="sample" loading="lazy" />
+            <h3 className={styles.show}>RDI Solutions</h3>
+            <p>ReactJS - Ant design</p>
+            <button>
+              <a href="https://rdi-solutions.netlify.app/" target="_blank">
+                View site
+              </a>
+            </button>
           </div>
+
           <div className={styles.project}>
             <img src={cart} alt="cart" loading="lazy" />
             <h3 className={styles.show}>On-Cart CMS</h3>
@@ -64,19 +70,16 @@ const Projects = ({ isOpenModal, setIsOpenModal, v, setV }) => {
                 View site
               </a>
             </button>
-            <button onClick={() => {
-              setV("oncart")
-              setIsOpenModal(!isOpenModal)
-            }}>Watch Video</button>
           </div>
           <div className={styles.project}>
             <img src={limo} alt="limo" loading="lazy" />
             <h3 className={styles.show}>Admirals CMS</h3>
             <p>React-Redux - Bootstrap - Node</p>
-            <button onClick={() => {
-              setV("admiral")
-              setIsOpenModal(!isOpenModal)
-            }}>Watch Video</button>
+            <button>
+              <a href="https://admiral-cms.netlify.app/" target="_blank">
+                View site
+              </a>
+            </button>
           </div>
           <div className={styles.project}>
             <img src={quiz} alt="quiz" loading="lazy" />

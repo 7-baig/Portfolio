@@ -15,14 +15,14 @@ const Contact = () => {
           <h1>Contact me</h1>
           <p>Have a question? or want to work together?</p>
           <div className={styles.socialContainer}>
-            <Fade left>
+            {/* <Fade left>
               <a href="#" >
                 <div className={styles.social}>
                   <img src={facebook} alt="facebook-icon" />
                   <p className={styles.fb}>Like me on Facebook</p>
                 </div>
               </a>
-            </Fade>
+            </Fade> */}
             <Fade left>
               <a href="https://twitter.com/saadbaigg" target="_blank">
                 <div className={styles.social}>
@@ -40,7 +40,7 @@ const Contact = () => {
               </a>
             </Fade>
             <Fade left>
-              <a href="https://www.linkedin.com/in/saad-baig-b6861a196/" target="_blank">
+              <a href="https://www.linkedin.com/in/saadbaigg/" target="_blank">
                 <div className={styles.social}>
                   <img src={linkedin} alt="linkedin-icon" />
                   <p className={styles.linkedin}>Connect on Linkedin</p>

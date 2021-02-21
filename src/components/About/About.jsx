@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import Fade from "react-reveal/Fade"
 import vector from "../../images/about.svg"
 import astronaut from "../../images/facts/astronaut.png"
-import me from "../../images/contact/me.jpg"
+import resume from "../../assets/resume.pdf"
 import styles from "./About.module.scss"
 
 const About = () => {
@@ -27,7 +27,7 @@ const About = () => {
             articles you'll find me reading books, drawing and travelling
           </p>
           <div className={styles.btnContainer}>
-            <a href="../../images/icons/books.png" download>
+            <a href={resume} download>
               <button>Download CV</button>
             </a>
             <Link to="#contact">
