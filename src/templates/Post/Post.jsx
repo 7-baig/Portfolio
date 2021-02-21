@@ -25,10 +25,6 @@ export const query = graphql`
 `
 
 const Post = props => {
-  const disqusConfig = {
-    shortname: process.env.GATSBY_DISQUS_NAME,
-    config: { identifier: props.data.contentfulArticle.title, title: props.data.contentfulArticle.title },
-  }
   return (
     <Layout>
       <SEO />

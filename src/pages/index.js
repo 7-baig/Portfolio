@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import Abilities from "../components/Abilities/Abilities"
 import About from "../components/About/About"
 import Blogs from "../components/Blogs/Blogs"
@@ -11,15 +11,13 @@ import Projects from "../components/Projects/Projects"
 import SEO from "../components/seo/seo"
 
 export default function Home() {
-  const [isOpenModal, setIsOpenModal] = useState(false)
-  const [v, setV] = useState("")
   return (
-    <Layout primary={true} isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal} v={v} setV={setV}>
+    <Layout primary={true}>
       <SEO />
       <About />
       <Abilities />
       <Experiences />
-      <Projects isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal} v={v} setV={setV}/>
+      <Projects />
       <Blogs />
       <Facts />
       <Contact />
