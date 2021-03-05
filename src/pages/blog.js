@@ -34,7 +34,7 @@ const Blog = () => {
   )
   return (
     <Layout secondary={true}>
-      <SEO />
+      <SEO title="Blog"/>
       <div className={styles.container}>
         {data.allContentfulArticle.edges.map(post => (
           <BlogPost

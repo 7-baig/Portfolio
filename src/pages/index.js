@@ -13,7 +13,7 @@ import SEO from "../components/seo/seo"
 export default function Home() {
   return (
     <Layout primary={true}>
-      <SEO />
+      <SEO title="Saad Baig" />
       <About />
       <Abilities />
       <Experiences />
