@@ -15,16 +15,8 @@ const Contact = () => {
           <h1>Contact me</h1>
           <p>Have a question? or want to work together?</p>
           <div className={styles.socialContainer}>
-            {/* <Fade left>
-              <a href="#" >
-                <div className={styles.social}>
-                  <img src={facebook} alt="facebook-icon" />
-                  <p className={styles.fb}>Like me on Facebook</p>
-                </div>
-              </a>
-            </Fade> */}
             <Fade left>
-              <a href="https://twitter.com/saadbaigg" target="_blank">
+              <a href="https://twitter.com/saadbaigg">
                 <div className={styles.social}>
                   <img src={twitter} alt="twitter-icon" loading="lazy"/>
                   <p className={styles.twitter}>Follow me on Twitter</p>
@@ -32,7 +24,7 @@ const Contact = () => {
               </a>
             </Fade>
             <Fade left>
-              <a href="https://github.com/saadbaigg" target="_blank">
+              <a href="https://github.com/saadbaigg">
                 <div className={styles.social}>
                   <img src={github} alt="github-icon" />
                   <p className={styles.git}>Follow me on Github</p>
@@ -40,7 +32,7 @@ const Contact = () => {
               </a>
             </Fade>
             <Fade left>
-              <a href="https://www.linkedin.com/in/saadbaigg/" target="_blank">
+              <a href="https://www.linkedin.com/in/saadbaigg/">
                 <div className={styles.social}>
                   <img src={linkedin} alt="linkedin-icon" />
                   <p className={styles.linkedin}>Connect on Linkedin</p>

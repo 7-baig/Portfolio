@@ -29,7 +29,7 @@ const Projects = () => {
             <h3 className={styles.show}>KPIBAR's Website</h3>
             <p>React - Gatsby - CSS3 - Firebase</p>
             <button className={styles.viewSite}>
-              <a href="https://website-pre.kpibar.com/" target="_blank">
+              <a href="https://website-pre.kpibar.com/">
                 View site
               </a>
             </button>
@@ -39,7 +39,7 @@ const Projects = () => {
             <h3 className={styles.show}>RDI Solutions</h3>
             <p>ReactJS - Ant design</p>
             <button className={styles.viewSite}>
-              <a href="https://rdi-solutions.netlify.app/" target="_blank">
+              <a href="https://rdi-solutions.netlify.app/">
                 View site
               </a>
             </button>
@@ -50,7 +50,7 @@ const Projects = () => {
             <h3 className={styles.show}>On-Cart CMS</h3>
             <p>React/Redux - Bootstrap</p>
             <button className={styles.viewSite}>
-              <a href="https://oncartadmin.web.app/" target="_blank">
+              <a href="https://oncartadmin.web.app/">
                 View site
               </a>
             </button>
@@ -60,7 +60,7 @@ const Projects = () => {
             <h3 className={styles.show}>Admirals CMS</h3>
             <p>React-Redux - Bootstrap - Node</p>
             <button className={styles.viewSite}>
-              <a href="https://admiral-cms.netlify.app/" target="_blank">
+              <a href="https://admiral-cms.netlify.app/">
                 View site
               </a>
             </button>
@@ -70,12 +70,12 @@ const Projects = () => {
             <h3 className={styles.show}>Quiz App (PWA)</h3>
             <p>React JS - TypeScript - PWA</p>
             <button className={styles.viewSite}>
-              <a href="https://quiz-app-bc10d.web.app/" target="_blank">
+              <a href="https://quiz-app-bc10d.web.app/">
                 View site
               </a>
             </button>
             <button className={styles.gitBtn}>
-              <a href="https://github.com/7-baig/Quiz-PWA" target="_blank">
+              <a href="https://github.com/7-baig/Quiz-PWA">
                 Github Repo
               </a>
             </button>
@@ -87,7 +87,6 @@ const Projects = () => {
             <button className={styles.viewSite}>
               <a
                 href="http://covid-19-tracker-app-saad-baig.surge.sh/"
-                target="_blank"
               >
                 View site
               </a>
@@ -95,14 +94,13 @@ const Projects = () => {
             <button className={styles.gitBtn}>
               <a
                 href="https://github.com/saadbaigg/Covid-19-Tracker-App"
-                target="_blank"
               >
                 Github Repo
               </a>
             </button>
           </div>
         </div>
-        <a href="https://github.com/saadbaigg?tab=repositories" target="_blank">
+        <a href="https://github.com/saadbaigg?tab=repositories" >
           <button className={styles.viewAll}>View all projects</button>
         </a>
       </div>

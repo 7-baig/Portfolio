@@ -13,8 +13,8 @@ export const query = graphql`
       author
       publishedDate(formatString: "D MMMM YYYY")
       image {
-        file {
-          url
+        fluid {
+            src
         }
       }
       body {
@@ -40,14 +40,17 @@ const Post = props => {
             </div>
             <div className={styles.socials}>
               <div className={styles.twitterBtn}>
-                <a href={`https://twitter.com/intent/tweet?text=${props.data.contentfulArticle.title}?url=https://saadbaigg.github.io/portfolio/blog/${props.data.contentfulArticle.slug}`} class="twitter-share-button" data-show-count="false">Tweet</a>
+                <a href={`https://twitter.com/intent/tweet?text=${props.data.contentfulArticle.title}?url=http://saadbaigg.github.io/portfolio/blog/${props.data.contentfulArticle.slug}`} class="twitter-share-button" data-show-count="false">Tweet</a>
               </div>
               <div className={styles.fbBtn}>
-                <div class="fb-like" data-href="https://saadbaigg.github.io/portfolio/" data-width="" data-layout="button" data-action="like" data-size="small" data-share="true"></div>
+                <div className="fb-like"
+                  data-href={`http://saadbaigg.github.io/portfolio/blog/${props.data.contentfulArticle.slug}`}
+                  data-width=""
+                  data-layout="button" data-action="like" data-size="small" data-share="true"></div>
               </div>
             </div>
           </div>
-          <img src={props.data.contentfulArticle.image.file.url} alt="sample" />
+          <img src={props.data.contentfulArticle.image.fluid.src} alt="sample" />
           <div className={styles.body}>
             <ReactMarkdown
               source={props.data.contentfulArticle.body.body}

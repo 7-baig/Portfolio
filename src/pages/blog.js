@@ -17,8 +17,8 @@ const Blog = () => {
               slug
               publishedDate(formatString: "D MMMM YYYY")
               image {
-                file {
-                  url
+                fluid {
+                  src
                 }
                 description
               }
@@ -34,7 +34,7 @@ const Blog = () => {
   )
   return (
     <Layout secondary={true}>
-      <SEO title="Blog"/>
+      <SEO title="Blog" />
       <div className={styles.container}>
         {data.allContentfulArticle.edges.map(post => (
           <BlogPost
@@ -42,7 +42,7 @@ const Blog = () => {
             title={post.node.title}
             author={post.node.author}
             description={post.node.description}
-            heroImage={post.node.image.file.url}
+            heroImage={post.node.image.fluid.src}
             imgDescription={post.node.image.description}
             date={post.node.publishedDate}
           />

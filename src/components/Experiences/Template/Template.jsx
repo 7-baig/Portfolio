@@ -6,7 +6,7 @@ const Template = ({ title, row }) => {
     <div className={styles.container}>
       <h2>{title}</h2>
       {row.map(row => (
-        <div className={styles.educationContainer}>
+        <div className={styles.educationContainer} key={row.institute}>
           <div className={styles.leftContainer}>
             <h3>{row.institute}</h3>
             <p>{row.duration}</p>
