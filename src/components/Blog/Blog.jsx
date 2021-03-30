@@ -4,7 +4,7 @@ import styles from "./Blog.module.scss"
 
 const Blog = ({ slug, title, description, heroImage, imgDescription, date, author }) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} key={slug}>
       <Link to={`/blog/${slug}`}>
         <h1>{title}</h1>
       </Link>

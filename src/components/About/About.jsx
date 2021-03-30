@@ -8,13 +8,11 @@ import styles from "./About.module.scss"
 
 const About = () => {
   return (
-    <div className={styles.container} id="about">
-      <div className={styles.leftContainer}>
-        <Fade left>
-          <img src={vector} alt="developer" loading="lazy"/>
-        </Fade>
-      </div>
-      <Fade right>
+    <Fade bottom>
+      <div className={styles.container} id="about">
+        <div className={styles.leftContainer}>
+          <img src={vector} alt="developer" loading="lazy" />
+        </div>
         <div className={styles.rightContainer}>
           <p>Full-Stack Developer</p>
           <div className={styles.nameContainer}>
@@ -35,8 +33,8 @@ const About = () => {
             </Link>
           </div>
         </div>
-      </Fade>
-    </div>
+      </div>
+    </Fade>
   )
 }
 

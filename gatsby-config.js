@@ -4,13 +4,14 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "Saad Baig.",
+    siteTitle: "Saad Baig.",
     titleTemplate: "Saad Baig.",
-    description: "Saad Baig.",
-    url: "https://saadbaigg.github.io/portfolio",
+    siteDescription: "Saad Baig.",
+    siteUrl: "https://saadbaigg.github.io/portfolio",
     twitterUsername: "@saadbaigg",
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-contentful`,
