@@ -1,7 +1,6 @@
 import React from "react"
 import Quote from "../Quote/Quote"
 import write from "../../images/icons/write.png"
-import bbc from "../../images/blogs/blog.jpg"
 import Fade from "react-reveal/Fade"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import styles from "./Blogs.module.scss"
@@ -47,7 +46,7 @@ const Blogs = () => {
         <div className={styles.blogsContainer}>
           {data.allContentfulArticle.edges.map(post => (
             <div className={styles.blog} key={post.node.slug}>
-              <img src={post.node.image.fluid.src} alt={post.node.image.description} loading="lazy"/>
+              <img src={post.node.image.fluid.src} alt={post.node.image.description} loading="lazy" />
               <Link to={`/blog/${post.node.slug}`}>
                 <h3>{post.node.title}</h3>
               </Link>
