@@ -20,9 +20,8 @@ const About = () => {
             <img src={astronaut} alt="astronaut" />
           </div>
           <p>
-            Hi, I'm a Full-Stack Web developer from Pakistan , working with web
-            technologies for 2+ years. When I'm not Coding, tweeting or writing
-            articles you'll find me reading books, drawing and travelling
+            Hi, I'm a Full-Stack Web developer from Pakistan, working with web
+            technologies for 2+ years. When I'm not building web applications you'll find me tweeting and reading books.
           </p>
           <div className={styles.btnContainer}>
             <a href={resume} download>
